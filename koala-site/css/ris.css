@@ -1,0 +1,67 @@
+/*----- PROGRAM SPECIFIC CSS ------*/
+#header {
+	background: url(../images/ris-header.jpg) top left no-repeat;
+}
+
+p, li {
+	color: #53637d;
+}
+
+.info-box {
+	color: #00609c;
+	border-color: #dbe6f2;
+}
+
+ul.block-menu li a {
+	background: #00609c;
+	color: #fff;
+}
+
+ul.block-menu li a:hover {
+	background: #088fe4;
+	color: #fff;
+}
+
+a.block-button {
+	color: #fff;
+	background: #00609c;
+}
+
+a:hover.block-button {
+	background: #088fe4;
+}
+
+#footer {
+	border-color: #dbe6f2;
+	color: #2b80a2;
+}
+
+h2, h3 {
+	color: #00609c;
+}
+
+#logo-menu img {
+	border-color: #dbe6f2;
+}
+
+.text-input {
+	background: #dbe6f2;
+	border-color: #00609c;
+}
+
+.login-button {
+	background: #00609c;
+	border-color: #00609c;
+	color: #fff;
+
+}
+
+.registration-block {
+	background: #e3e3e3;
+}
+
+.registration-block .step {
+	color: #005183;
+	background: #fff;
+	border: 1px solid #00609c;
+}

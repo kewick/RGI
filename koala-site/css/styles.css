@@ -1,0 +1,330 @@
+/* reset styles */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var, b, u, i, center,
+dl, dt, dd, ol, ul, li, fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+	margin: 0; padding: 0;  border: 0; outline: 0; font-size: 100%;
+	vertical-align: baseline; background: transparent;
+}
+body { line-height: 1; }
+ol, ul { list-style: none; }
+blockquote, q { quotes: none; }
+blockquote:before, blockquote:after, q:before, q:after { content: ''; }
+:focus { outline: 0; }
+ins { text-decoration: none; }
+del { text-decoration: line-through; }
+table { border-collapse: collapse; border-spacing: 0; }
+.flt-right { float: right; margin: 0 0 0 10px;}
+.flt-left { float: left; margin: 0 10px 0 0;} 
+ 
+body {
+	font-size: 62.5%;
+	text-align: center;
+	color: #000000;
+	background: url(../images/bg.gif) repeat-y top center;
+	font: 12px "Myriad Pro", Myriad, "Liberation Sans", "Nimbus Sans L", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+
+ 
+.container {
+	width: 930px;
+	margin: 0 auto;
+	text-align: left;
+	position: relative;
+}
+ 
+/* for clearing any floats */
+.clearfloat {
+    clear:both;
+    height:0;
+    font-size: 1px;
+    line-height: 0px;
+}
+ 
+/*--- header section ---*/
+#header {
+	position: relative;
+	width: 930px;
+	height: 225px;
+	margin: 15px 0;
+}
+
+#header .image-wrapper {
+	position: absolute; 
+	left: 50%;
+}
+
+#header .image-wrapper {
+	position: relative; 
+	/*left: -50%;*/
+	width: 190px;
+	height: 88px;
+	margin-left: -95px;
+}
+
+.fadein img { 
+	position:absolute; 
+	left:0; 
+	top:0;
+}
+
+
+/*--- soon to be added horizontal menu ---*/
+#menu {
+	float: left;
+}
+#menu li {
+	display: block;
+	float: left;
+}
+#menu li a {
+	display: block;
+	text-decoration: none;
+	height: 50px;
+	width: 125px;
+	padding: 5px 10px 5px 10px;
+}
+/* soon to be added menu stylings */
+#menu li.current_page_item a {
+}
+#menu li.first a {
+}
+#menu li.last a {
+}
+ 
+/*--- content section ---*/
+#main-content {
+	float: left;
+	position: relative;
+	width: 635px;
+	
+}
+
+#main-content p, li {
+	font-size: 14px;
+}
+
+#main-content ul {
+	margin: 5px 0 10px 20px;
+}
+
+#side-content-right {
+	float: right;
+	width: 295px;
+}
+
+#login {
+	width: 265px;
+	background: #e3e3e3;
+	padding: 15px;
+}
+
+h2 {
+	font-size: 24px;
+	font-weight: normal;
+	padding: 0 0 6px 0;
+}
+
+h3 {
+	font-size: 18px;
+	font-weight: normal;
+	padding: 0 0 4px 0;
+}
+
+.text-input {
+	width: 247px;
+	height: 21px;
+	display: block;
+	border: 1px solid;
+	padding: 2px 5px;
+}
+
+input[type=button]
+{
+border: none;
+background-position:0px;
+background-repeat: no-repeat;
+height:60px;
+width:120px;
+outline: 0;
+
+}
+
+
+.login-button {
+	border: 1px solid;
+	margin: 10px 0 0 0;
+	cursor: pointer;
+}
+
+.login-form span{
+	display: block;
+	margin: 5px 0 2px 0;
+}
+
+.info-box {
+	
+	border: 2px solid;
+	margin: 0 17px 17px 0;
+	padding: 8px 7px;
+}
+#main-content .info-box p{
+	font-size: 12px;
+}
+
+.info-box img {
+	float: left;
+	margin: 0 8px 0 0;
+}
+
+#main-content ul.block-menu {
+	margin: 0;
+}
+
+ul.block-menu li {
+	float: left;
+	margin: 0 17px 17px 0;
+}
+
+ul.block-menu li a {
+	width: 300px;
+	height: 44px;
+	text-align: center;
+	display: block;
+	font-size: 24px;
+	text-decoration: none;
+	padding: 40px 0 25px 0 ;
+}
+
+
+ 
+/*--- footer section ---*/
+#footer {
+	width: 100%;
+	border-top: 2px solid;
+}
+
+#footer  p{
+	text-align: right;
+	margin: 10px 0;
+}
+
+#logo-menu {
+	position: relative;
+	margin: 0 0 5px 0;
+}
+
+#logo-menu img {
+	margin: 0 0 0 2px;
+	border: 2px solid;
+}
+
+#logo-menu img:first-child {
+	margin: 0;
+}
+
+/*----modal styling----*/
+#page-overlay {
+    position: fixed; 
+	width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: #000;
+    opacity: 0.97;
+    /*--for ie */filter: alpha(opacity=90);
+}
+
+#modal-box {
+    position:absolute;
+    border: 2px solid #00609c;
+}
+
+#modal-content {
+    background:#fff;
+	padding:20px;
+}
+
+/*----language selection page----*/
+#language-wrapper {
+	position: relative;
+	width: 600px;
+	height: 204px;
+}
+
+#language-wrapper p {
+	font-size: 14px;
+	margin: 3px 0 0 0;
+}
+
+#lang-en, #lang-fr {
+	position: absolute;
+	width: 266px;
+	height: 188px;
+	top: 20px;
+}
+
+#lang-en {
+	left: 25px;
+}
+
+#lang-fr {
+	right: 25px;
+}
+
+#lang-fr a.block-button, #lang-en a.block-button{
+	margin: 15px 0 0 31px;
+}
+
+a.block-button {
+	text-align: center;
+	text-decoration: none;
+	display: block;
+	font-size: 18px;
+	padding: 6px 32px;
+}
+
+a.sidebar-button {
+	width: 231px;
+	margin: 17px 0 0 0;
+}
+/*---Registration ---*/
+.registration-block {
+	margin: 0 17px 17px 0;
+	padding: 10px 8px 7px 8px;;
+}
+
+.registration-block h3 {
+	margin: 2px 0 0 0;
+}
+
+#main-content .registration-block ul {
+	margin: 5px 0 10px 50px;
+}
+
+#main-content .registration-block ul {
+	margin: 5px 0 10px 50px;
+}
+
+#main-content .registration-block p {
+	margin: 5px 0 10px 40px;
+}
+
+.registration-block .step {
+	font-size: 20px;
+	font-weight: bold;
+	padding: 0 9px;
+	margin: 0 10px 0 0;
+	float: left;
+	display: block;
+}
+
+.registration-block .button-set {
+	margin: 0 0 9px 70px;
+}
+
+#register-options {
+	margin: 0 0 9px 156px;
+}

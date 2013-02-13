@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<title>Respect Group Start Page</title>
+<!--[if IE]>
+<script src="js/html5.js"></script>
+<![endif]-->
+<link rel="stylesheet" href="css/styles.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="css/ris.css" type="text/css" media="screen" />
+<script src="js/jquery.min.js"></script>
+<script src="js/scripts.js"></script>
+<script>
+$(document).ready(function(){	
+	if ($('.fadein').find('img').size()!==1) {
+			$('.fadein img').shuffle();
+			$('.fadein img:gt(0)').hide();
+			setInterval(function(){$('.fadein :first-child').fadeOut().next('img').fadeIn().end().appendTo('.fadein');}, 5000);
+	}
+	
+	var registerUserPass = $('#register-user-password'),
+    registerName = $('#register-first-last'),
+    buttonUserPass = $('#button-user-password');
+    buttonName = $('#button-first-last');
+
+	registerUserPass.hide();
+	registerName.hide();
+
+	buttonUserPass.click(function() {
+		   registerName.hide();
+		   registerUserPass.show();
+	});
+
+	buttonName.click(function() {
+		   registerUserPass.hide();
+		   registerName.show();
+	});
+	
+});
+</script>
+</head>
+<body class="ris">
+<div class="container"> 
+	<!-- the header -->
+	<div id="header">
+		<div class="image-wrapper">
+			<div class="fadein">
+				<img src="images/sport-man-lrg.gif" />
+				<img src="images/ris-lrg.gif" />
+			</div>
+		</div>
+	</div>
+	 
+	<!-- main content of the page -->
+	<div id="main-content">
+		<h2>Registration</h2>
+	<div class="registration-block">
+		<div class="step">1</div>
+		<h3>Have you registered for any of the following programs previously?</h3>
+		<ul>
+			<li>Respect in Sport</li>
+			<li>Respect in Sport for Hockey Canada (SpeakOut Online)</li>
+			<li>The Parent Program</li>
+			<li>Respect in Soccer</li>
+			<li>Respect in School</li>
+			<li>Respect in the Workplace</li>
+		</ul>
+	</div>
+	<div class="registration-block">
+		<div class="step">2</div>
+		<h3>If No, Click Continue <a href="#" class="block-button flt-right">Continue</a></h3>
+		<br class="clearfloat" />
+	</div>
+	<div class="registration-block">
+		<div class="step">3</div>
+		<h3>If Yes, let's start registration by accessing your existing profile.</h3>
+		<p>You may access your profile by any of the two ways listed below.</p>
+			<div class="button-set">
+				<a href="#" id="button-user-password" class="block-button flt-left">Username &amp; Password</a>
+				<a href="#" id="button-first-last" class="block-button flt-left">First and Last Name</a>
+				<br class="clearfloat" />
+			</div>
+			<div id="register-options">
+				<div id="register-user-password">
+					<form action="#" class="register-form" method="post" name="login">
+					<label> 
+						<span>Username</span>
+					<input type="text" class="text-input" name="username" />
+					</label>
+					<label> 
+						<span>Password</span>
+						<input type="password" class="text-input" name="password" size="20" />
+					</label>
+					<button type="submit" class="login-button">
+						SUBMIT
+					</button>
+				</form>
+				</div>
+				<div id="register-first-last">
+					<form action="#" class="register-form" method="post" name="login">
+					<label> 
+						<span>First Name</span>
+					<input type="text" class="text-input" name="firstname" />
+					</label>
+					<label> 
+						<span>Last Name</span>
+						<input type="text" class="text-input" name="lastname" size="20" />
+					</label>
+					<button type="submit" class="login-button">
+						SUBMIT
+					</button>
+				</form>
+				</div>
+			</div>
+	</div>	
+	</div>
+	<!-- side content of the page right -->
+	<div id="side-content-right">
+		<div id="logo-menu">
+			<img src="images/sport-man-sml.gif" />
+			<img src="images/coaching-man-small.gif" />
+			<img src="images/ris-logo-sml.gif" />
+		</div>
+		<a href="#" class="block-button sidebar-button">Return to Start Page</a>
+	</div>	
+	<br class="clearfloat" />	 
+	<!-- footer -->
+	<div id="footer">
+			<p>Respect in Sport is a registered trademark of Respect Group Inc.</p>
+	</div>
+</div>
+</body>
+</html>

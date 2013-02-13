@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<title>Respect Group Start Page</title>
+<!--[if IE]>
+<script src="js/html5.js"></script>
+<![endif]-->
+<link rel="stylesheet" href="css/styles.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="css/ris.css" type="text/css" media="screen" />
+<script src="js/jquery.min.js"></script>
+<script src="js/scripts.js"></script>
+<script>
+$(document).ready(function(){	
+	// Ajax request for html file on server
+	$.get('language-select.html', function(data){
+		modalBox.openModal({modalContent: data});
+}	);
+	if ($('.fadein').find('img').size()!==1) {
+			$('.fadein img').shuffle();
+			$('.fadein img:gt(0)').hide();
+			setInterval(function(){$('.fadein :first-child').fadeOut().next('img').fadeIn().end().appendTo('.fadein');}, 5000);
+	}
+});
+</script>
+</head>
+<body class="ris">
+<div class="container"> 
+	<!-- the header -->
+	<div id="header">
+		<div class="image-wrapper">
+			<div class="fadein">
+				<img src="images/sport-man-lrg.gif" />
+				<img src="images/ris-lrg.gif" />
+			</div>
+		</div>
+	</div>
+	 
+	<!-- main content of the page -->
+	<div id="main-content">
+		<div class="info-box">
+			<p><img src="images/important-icon.gif" />To ensure proper certification, it is important you are accessing the proper site for the client or organization who requested you complete it. If you are not sure if you are at the correct location contact the company or organization who requested you complete this program.</p>
+		</div>
+			<ul class="block-menu">
+				<li><a href="#">Register a New User</a></li>
+				<li><a href="#">Port a Certificate</a></li>
+				<li><a href="#">Recertify Now</a></li>
+				<li><a href="#">Look up a Certification</a></li>
+			</ul>
+	</div>
+	<!-- side content of the page right -->
+	<div id="side-content-right">
+		<div id="logo-menu">
+			<img src="images/sport-man-sml.gif" />
+			<img src="images/coaching-man-small.gif" />
+			<img src="images/ris-logo-sml.gif" />
+		</div>
+		<div id="login">
+			<h2>Login</h2>
+			<form action="#" class="login-form" method="post" name="login">
+				<label> 
+					<span>Username</span>
+				<input type="text" class="text-input" name="username" />
+				</label>
+				<label> 
+					<span>Password</span>
+					<input type="text" class="text-input" name="password" size="20" />
+				</label>
+				<label>Remember Username</label>
+				<input type="checkbox" value="remember_username" />
+				<label>Low Bandwidth </label>
+				<input type="checkbox" value="low_bandwidth" />
+				<button type="submit" class="login-button">
+					LOGIN
+				</button>
+			</form>
+		</div>
+	</div>	
+	<br class="clearfloat" />	 
+	<!-- footer -->
+	<div id="footer">
+			<p>Respect in Sport is a registered trademark of Respect Group Inc.</p>
+	</div>
+</div>
+</body>
+</html>
