@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<title>Respect Group Start Page</title>
+<!--[if IE]>
+<script src="js/html5.js"></script>
+<![endif]-->
+<link rel="stylesheet" href="css/styles.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="css/ris.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="css/jquery-ui-1.8.4.custom.css" type="text/css" media="screen" />
+
+<link rel="stylesheet" href="css/ui.dropdownchecklist.standalone.css" type="text/css" media="screen" />
+<script src="js/jquery.min.js"></script>
+<script src="js/scripts.js"></script>
+    
+<script type="text/javascript" src="js/jquery-ui-1.8.13.custom.min.js"></script>
+<script type="text/javascript" src="js/ui.dropdownchecklist.js"></script>
+
+    <style>
+table td { vertical-align: top }
+dd { padding-bottom: 15px }
+    </style>
+
+
+<script>
+$(document).ready(function(){
+	
+	if ($('.fadein').find('img').size()!==1) {
+			$('.fadein img').shuffle();
+			$('.fadein img:gt(0)').hide();
+			setInterval(function(){$('.fadein :first-child').fadeOut().next('img').fadeIn().end().appendTo('.fadein');}, 5000);
+	}
+	
+	var registerUserPass = $('#register-user-password'),
+    registerName = $('#register-first-last'),
+    buttonUserPass = $('#button-user-password');
+    buttonName = $('#button-first-last');
+
+	registerUserPass.hide();
+	registerName.hide();
+
+	buttonUserPass.click(function() {
+		   registerName.hide();
+		   registerUserPass.show();
+	});
+
+	buttonName.click(function() {
+		   registerUserPass.hide();
+		   registerName.show();
+	});
+});
+</script>
+</head>
+<body class="ris">
+<div class="container"> 
+	<!-- the header -->
+	<div id="header">
+		<div class="image-wrapper">
+			<div class="fadein">
+				<img src="images/sport-man-lrg.gif" />
+				<img src="images/ris-lrg.gif" />
+			</div>
+		</div>
+	</div>
+	 
+	<!-- main content of the page -->
+	<div id="main-content">
+		<h2>Program Registration</h2>
+		<div class="registration-block">
+				<div id="register-new">
+						<form action="#" class="register-form" method="post" name="login">
+						<label> 
+							<span>Username</span>
+						<input type="text" class="text-input" name="username" />
+						</label>
+						<label> 
+							<span>Password</span>
+							<input type="text" class="text-input" name="password" size="20" />
+						</label>
+						<label> 
+							<span>Confirm Password</span>
+							<input type="text" class="text-input" name="password" size="20" />
+						</label>
+						<label> 
+							<span>First Name</span>
+						<input type="text" class="text-input" name="username" />
+						</label>
+						<label> 
+							<span>Last Name</span>
+							<input type="text" class="text-input" name="password" size="20" />
+						</label>
+						<label> 
+							<span>Email</span>
+							<input type="email" class="text-input" name="password" size="20" />
+						</label>
+						
+							<span>Association</span>
+						 <select id="s1" size"30" class="s1" multiple="multiple" tabindex='8'>
+							<option>Low</option>
+							<option>Medium</option>
+							<option>High</option>
+						</select>
+						
+						
+						<button type="submit" class="login-button">
+							SUBMIT
+						</button>
+					</form>
+				</div>
+		</div>	
+	</div>
+	<!-- side content of the page right -->
+	<div id="side-content-right">
+		<div id="logo-menu">
+			<img src="images/sport-man-sml.gif" />
+			<img src="images/coaching-man-small.gif" />
+			<img src="images/ris-logo-sml.gif" />
+		</div>
+		<a href="#" class="block-button sidebar-button">Return to Start Page</a>
+	</div>	
+	<br class="clearfloat" />	 
+	<!-- footer -->
+	<div id="footer">
+			<p>Respect in Sport is a registered trademark of Respect Group Inc.</p>
+	</div>
+</div>
+</body>
+</html>
