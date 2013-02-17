@@ -18,7 +18,7 @@ $.fn.shuffle = function() {
         return $(shuffled);
  
 };
-//END SHUFFLE FUNCTION
+//END SHUFFLE FUNCTION   
 
 //BEGIN MODAL BOX FUNCTION
 var modalBox = (function(){
