@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+	<title>Respect Group Registration Choice</title>
+
+	<link rel="stylesheet" href="css/normalize.css" type="text/css" media="screen" />
+	<link rel="stylesheet" href="css/styles.css" type="text/css" media="screen" />
+	<link rel="stylesheet" href="css/ris.css" type="text/css" media="screen" />
+	<link rel="stylesheet" href="css/jquery-ui-1.8.4.custom.css" type="text/css" media="screen" />
+
+	<script src="js/modernizr.custom.min.js"></script>
+
+</head>
+<body id="registration-section">
+<div class="container"> 
+	<!-- the header -->
+	<header>
+		<div class="image-wrapper">
+			<div class="fadein">
+				<img src="images/sport-man-lrg.gif" />
+				<img src="images/ris-lrg.gif" />
+			</div>
+		</div>
+	</header>
+	 
+	<!-- main content of the page -->
+	<div id="main-content">
+		<h2>Profile Not Found</h2>
+		<div class="info-box">
+			<p><img src="images/important-icon.gif" />The username and password  entered does not match a profile on this system. Please try again or return to the previous page to try an alternate method</p>
+		</div>
+		<div class="form-block">
+			<div class="registration-options">
+				<div id="register-user-password">
+					<form action="#" class="register-form" method="post" name="login">
+						<div class="input-holder">
+							<label for="username">Username</label>
+							<input type="text" name="username" required="required"/>
+						</div>
+						<div class="input-holder">
+							<label for="password">Password</label>
+							<input type="password" name="password" required="required"/>
+						</div>
+						<div class="form-button-bar">
+							<button type="submit">Submit</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>	
+	</div>
+	<!-- side content of the page right -->
+	<div id="side-content-right">
+		<div id="logo-menu">
+			<img src="images/sport-man-sml.gif" />
+			<img src="images/coaching-man-small.gif" />
+			<img src="images/ris-logo-sml.gif" />
+		</div>
+		<a href="#" class="button blarge sidebar-button">Return to Start Page</a>
+		<a href="#" class="button blarge sidebar-button">Return to Previous Page</a>
+	</div>	
+	
+	<!-- footer -->
+	<footer>
+			<p>Respect in Sport is a registered trademark of Respect Group Inc.</p>
+	</footer>
+</div>
+
+<script src="js/jquery.min.js"></script>
+<script src="js/scripts.js"></script>
+<script src="js/jquery-ui-1.8.13.custom.min.js"></script>
+
+<script>
+$(document).ready(function(){	
+	if ($('.fadein').find('img').size()!==1) {
+			$('.fadein img').shuffle();
+			$('.fadein img:gt(0)').hide();
+			setInterval(function(){$('.fadein :first-child').fadeOut().next('img').fadeIn().end().appendTo('.fadein');}, 5000);
+	}
+	
+});
+</script>
+
+</body>
+</html>
