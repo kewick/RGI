@@ -3,38 +3,33 @@
 <head>
 <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
 <title>Respect Group Start Page</title>
-<!--[if IE]>
-<script src="js/html5.js"></script>
-<![endif]-->
+
+<link rel="stylesheet" href="css/normalize.css" type="text/css" media="screen" />
 <link rel="stylesheet" href="css/styles.css" type="text/css" media="screen" />
 <link rel="stylesheet" href="css/ris.css" type="text/css" media="screen" />
-<script src="js/jquery.min.js"></script>
-<script src="js/scripts.js"></script>
-<script>
-$(document).ready(function(){	
-	// Ajax request for html file on server
-	$.get('language-select.html', function(data){
-		modalBox.openModal({modalContent: data});
-}	);
-	if ($('.fadein').find('img').size()!==1) {
-			$('.fadein img').shuffle();
-			$('.fadein img:gt(0)').hide();
-			setInterval(function(){$('.fadein :first-child').fadeOut().next('img').fadeIn().end().appendTo('.fadein');}, 5000);
-	}
-});
-</script>
+<link rel="stylesheet" href="css/jquery-ui-1.8.4.custom.css" type="text/css" media="screen" />
+
+<link rel="stylesheet" href="css/ui.dropdownchecklist.standalone.css" type="text/css" media="screen" />
+
+
+<!--[if lt IE 9]>
+<script src="js/html5.js"></script>
+<![endif]-->
+
+
 </head>
-<body class="ris">
+
+<body id="registration-section">
 <div class="container"> 
 	<!-- the header -->
-	<div id="header">
+	<header>
 		<div class="image-wrapper">
 			<div class="fadein">
 				<img src="images/sport-man-lrg.gif" />
 				<img src="images/ris-lrg.gif" />
 			</div>
 		</div>
-	</div>
+	</header>
 	 
 	<!-- main content of the page -->
 	<div id="main-content">
@@ -60,11 +55,11 @@ $(document).ready(function(){
 			<form action="#" class="login-form" method="post" name="login">
 				<label> 
 					<span>Username</span>
-				<input type="text" class="text-input" name="username" />
+				<input type="text" class="text-input" name="username" required="required"/>
 				</label>
 				<label> 
 					<span>Password</span>
-					<input type="text" class="text-input" name="password" size="20" />
+					<input type="text" class="text-input" name="password" required="required"/>
 				</label>
 				<label>Remember Username</label>
 				<input type="checkbox" value="remember_username" />
@@ -78,9 +73,29 @@ $(document).ready(function(){
 	</div>	
 	<br class="clearfloat" />	 
 	<!-- footer -->
-	<div id="footer">
+	<footer>
 			<p>Respect in Sport is a registered trademark of Respect Group Inc.</p>
-	</div>
+	</footer>
 </div>
+
+
+<script src="js/jquery.min.js"></script>
+<script src="js/scripts.js"></script>
+<script src="js/jquery-ui-1.8.13.custom.min.js"></script>
+
+<script>
+$(document).ready(function(){	
+	// Ajax request for html file on server
+	$.get('language-select.html', function(data){
+		modalBox.openModal({modalContent: data});
+}	);
+	if ($('.fadein').find('img').size()!==1) {
+			$('.fadein img').shuffle();
+			$('.fadein img:gt(0)').hide();
+			setInterval(function(){$('.fadein :first-child').fadeOut().next('img').fadeIn().end().appendTo('.fadein');}, 5000);
+	}
+});
+</script>
+
 </body>
 </html>

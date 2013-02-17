@@ -1,5 +1,5 @@
 /*----- PROGRAM SPECIFIC CSS ------*/
-#header {
+header {
 	background: url(../images/ris-header.jpg) top left no-repeat;
 }
 
@@ -22,20 +22,6 @@ ul.block-menu li a:hover {
 	color: #fff;
 }
 
-a.block-button {
-	color: #fff;
-	background: #00609c;
-}
-
-a:hover.block-button {
-	background: #088fe4;
-}
-
-#footer {
-	border-color: #dbe6f2;
-	color: #2b80a2;
-}
-
 h2, h3 {
 	color: #00609c;
 }
@@ -54,10 +40,6 @@ h2, h3 {
 	border-color: #00609c;
 	color: #fff;
 
-}
-
-.registration-block {
-	background: #e3e3e3;
 }
 
 .registration-block .step {

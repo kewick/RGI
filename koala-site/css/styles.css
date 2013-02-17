@@ -1,33 +1,15 @@
-/* reset styles */
-html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var, b, u, i, center,
-dl, dt, dd, ol, ul, li, fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td {
-	margin: 0; padding: 0;  border: 0; outline: 0; font-size: 100%;
-	vertical-align: baseline; background: transparent;
-}
-body { line-height: 1; }
-ol, ul { list-style: none; }
-blockquote, q { quotes: none; }
-blockquote:before, blockquote:after, q:before, q:after { content: ''; }
-:focus { outline: 0; }
-ins { text-decoration: none; }
-del { text-decoration: line-through; }
-table { border-collapse: collapse; border-spacing: 0; }
-.flt-right { float: right; margin: 0 0 0 10px;}
-.flt-left { float: left; margin: 0 10px 0 0;} 
- 
+
+
+/* CORE
+------------------------------------------------------------------------------------*/
 body {
-	font-size: 62.5%;
 	text-align: center;
-	color: #000000;
+	color: #363636;
 	background: url(../images/bg.gif) repeat-y top center;
-	font: 12px "Myriad Pro", Myriad, "Liberation Sans", "Nimbus Sans L", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+	font-size:12px;
 }
 
-
- 
 .container {
 	width: 930px;
 	margin: 0 auto;
@@ -35,28 +17,180 @@ body {
 	position: relative;
 }
  
-/* for clearing any floats */
-.clearfloat {
-    clear:both;
-    height:0;
-    font-size: 1px;
-    line-height: 0px;
+
+/* GLOBAL FORMATTING
+------------------------------------------------------------------------------------*/
+p{
+	line-height:1.5em;
 }
- 
-/*--- header section ---*/
-#header {
+a{
+	color:#dc5000;
+}
+
+a:hover{
+	text-decoration:none;
+}
+
+a:focus{
+	outline:none;
+}
+
+h1, h2, h3, h4{
+	font-family: "Myriad Pro", Myriad, "Liberation Sans", "Nimbus Sans L", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-weight: normal;
+}
+
+h2 {
+	font-size: 24px;
+}
+
+h3 {
+	font-size: 18px;
+	padding: 0 0 4px 0;
+}
+
+.button{
+	color:#ffffff;
+	background-color:#00609c;
+	border:1px solid #e6e6e6;
+	border-radius:3px;
+	display: inline-block;
+	padding: 7px 10px;
+	margin:0 5px 5px 0;
+	text-align: center;
+	text-decoration: none;
+	*display:inline;
+	zoom:1;
+}
+
+.button:hover{
+	background-color:#1b74ab;
+}
+
+.button.bsmall{
+	
+}
+
+.button.blarge{
+	font-size:15px;
+	padding: 9px 32px;
+}
+
+button[type=submit]{
+	color:#ffffff;
+	background-color:#00609c;
+	border:1px solid #e6e6e6;
+	border:none;
+	border-radius:3px;
+	display: inline-block;
+	padding: 6px 10px;
+	margin:0 5px 5px 0;
+	text-align: center;
+	text-decoration: none;
+	*display:inline;
+	zoom:1;
+}
+
+
+a.sidebar-button {
+	font-size:18px;
+	width: 231px;
+	margin: 17px 0 0 0;
+}
+
+
+
+/* FORM
+-----------------------*/
+input[type=text],
+input[type=email],
+input[type=password],
+input[type=number],
+textarea,
+select{
+	background-color:#d5e5ee;
+	border:1px solid #00609c;
+	padding:5px;
+}
+
+input[type=text]:focus,
+input[type=email]:focus,
+input[type=password]:focus,
+input[type=number]:focus,
+textarea:focus,
+select:focus{
+	background-color:#8ec9e8;
+	border:1px solid #00609c;
+	outline:1px solid #d5e5ee;
+}
+
+.form-block {
+	border:3px solid #f3f3f3;
+	border-radius:5px;
+	padding: 10px;
+}
+
+.form-block .input-holder{
+	background-color:#f3f3f3;
+	border-radius:0 3px 3px 3px;
+	margin-bottom:2px;
+}
+
+.form-block .input-holder:after{
+	visibility: hidden;
+	display: block;
+	font-size: 0;
+	content: " ";
+	clear: both;
+	height: 0;
+}
+
+.form-block .input-holder label{
+	color: #fff;
+	background-color: #1b74ab;
+	border-radius:3px 0 0 3px;
+	float: left;
+	font-weight: bold;
+	margin-right: 10px;
+	padding: 8px 10px;
+	width: 150px;
+	height: 16px;
+}
+
+.form-block .input-holder input,
+.form-block .input-holder select,
+.form-block .input-holder textarea{
+	float:left;
+	margin-top:3px;
+	width:200px;
+}
+
+.form-block .input-holder select{
+	margin-top:7px;
+}
+
+
+.form-block .form-button-bar{
+	margin-top:15px;
+	text-align: center;
+}
+
+
+/* HEADER
+------------------------------------------------------------------------------------*/
+header {
 	position: relative;
 	width: 930px;
 	height: 225px;
 	margin: 15px 0;
 }
 
-#header .image-wrapper {
+header .image-wrapper {
 	position: absolute; 
 	left: 50%;
 }
 
-#header .image-wrapper {
+header .image-wrapper {
 	position: relative; 
 	/*left: -50%;*/
 	width: 190px;
@@ -71,6 +205,8 @@ body {
 }
 
 
+/* MAIN MENU
+------------------------------------------------------------------------------------*/
 /*--- soon to be added horizontal menu ---*/
 #menu {
 	float: left;
@@ -94,12 +230,14 @@ body {
 #menu li.last a {
 }
  
-/*--- content section ---*/
+/* CONTENT
+------------------------------------------------------------------------------------*/
 #main-content {
 	float: left;
+	margin-bottom:25px;
+	padding-right:20px;
 	position: relative;
-	width: 635px;
-	
+	width: 615px;
 }
 
 #main-content p, li {
@@ -119,44 +257,6 @@ body {
 	width: 265px;
 	background: #e3e3e3;
 	padding: 15px;
-}
-
-h2 {
-	font-size: 24px;
-	font-weight: normal;
-	padding: 0 0 6px 0;
-}
-
-h3 {
-	font-size: 18px;
-	font-weight: normal;
-	padding: 0 0 4px 0;
-}
-
-.text-input {
-	width: 247px;
-	height: 21px;
-	display: block;
-	border: 1px solid;
-	padding: 2px 5px;
-}
-
-input[type=button]
-{
-border: none;
-background-position:0px;
-background-repeat: no-repeat;
-height:60px;
-width:120px;
-outline: 0;
-
-}
-
-
-.login-button {
-	border: 1px solid;
-	margin: 10px 0 0 0;
-	cursor: pointer;
 }
 
 .login-form span{
@@ -181,11 +281,14 @@ outline: 0;
 
 #main-content ul.block-menu {
 	margin: 0;
+	padding:0;
 }
 
 ul.block-menu li {
 	float: left;
 	margin: 0 17px 17px 0;
+	pa
+	list-style:none;
 }
 
 ul.block-menu li a {
@@ -200,13 +303,15 @@ ul.block-menu li a {
 
 
  
-/*--- footer section ---*/
-#footer {
+/* Footer
+------------------------------------------------------------------------------------*/
+footer {
+	border-top:2px solid #e6e6e6;
+	clear:both;
 	width: 100%;
-	border-top: 2px solid;
 }
 
-#footer  p{
+footer  p{
 	text-align: right;
 	margin: 10px 0;
 }
@@ -225,7 +330,31 @@ ul.block-menu li a {
 	margin: 0;
 }
 
-/*----modal styling----*/
+
+
+/* layout utils
+------------------------------------------------------------------------------------*/
+.flt-left{
+	float:left;
+}
+.flt-right{
+	float:right;
+}
+
+.clearfix:after {
+	visibility: hidden;
+	display: block;
+	font-size: 0;
+	content: " ";
+	clear: both;
+	height: 0;
+	}
+* html .clearfix             { zoom: 1; } /* IE6 */
+*:first-child+html .clearfix { zoom: 1; } /* IE7 */
+
+
+/* Modal
+------------------------------------------------------------------------------------*/
 #page-overlay {
     position: fixed; 
 	width: 100%;
@@ -247,7 +376,8 @@ ul.block-menu li a {
 	padding:20px;
 }
 
-/*----language selection page----*/
+/* Start Page
+------------------------------------------------------------------------------------*/
 #language-wrapper {
 	position: relative;
 	width: 600px;
@@ -278,41 +408,29 @@ ul.block-menu li a {
 	margin: 15px 0 0 31px;
 }
 
-a.block-button {
-	text-align: center;
-	text-decoration: none;
-	display: block;
-	font-size: 18px;
-	padding: 6px 32px;
-}
+/* Form Block
+------------------------------------------------------------------------------------*/
 
-a.sidebar-button {
-	width: 231px;
-	margin: 17px 0 0 0;
-}
-/*---Registration ---*/
-.registration-block {
-	margin: 0 17px 17px 0;
-	padding: 10px 8px 7px 8px;;
-}
 
-.registration-block h3 {
+
+
+.form-block h3 {
 	margin: 2px 0 0 0;
 }
 
-#main-content .registration-block ul {
+#main-content .form-block ul {
 	margin: 5px 0 10px 50px;
 }
 
-#main-content .registration-block ul {
+#main-content .form-block ul {
 	margin: 5px 0 10px 50px;
 }
 
-#main-content .registration-block p {
+#main-content .form-block p {
 	margin: 5px 0 10px 40px;
 }
 
-.registration-block .step {
+.form-block .step {
 	font-size: 20px;
 	font-weight: bold;
 	padding: 0 9px;
@@ -321,13 +439,12 @@ a.sidebar-button {
 	display: block;
 }
 
-.registration-block .button-set {
+.form-block .button-set {
 	margin: 0 0 9px 70px;
 }
 
 #register-options {
 	margin: 0 0 9px 156px;
 }
-
 
 
