@@ -1,21 +1,15 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
-<title>Respect Group Start Page</title>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+	<title>Respect Group Registration Choice</title>
 
-<link rel="stylesheet" href="css/normalize.css" type="text/css" media="screen" />
-<link rel="stylesheet" href="css/styles.css" type="text/css" media="screen" />
-<link rel="stylesheet" href="css/ris.css" type="text/css" media="screen" />
-<link rel="stylesheet" href="css/jquery-ui-1.8.4.custom.css" type="text/css" media="screen" />
+	<link rel="stylesheet" href="css/normalize.css" type="text/css" media="screen" />
+	<link rel="stylesheet" href="css/styles.css" type="text/css" media="screen" />
+	<link rel="stylesheet" href="css/ris.css" type="text/css" media="screen" />
+	<link rel="stylesheet" href="css/jquery-ui-1.8.4.custom.css" type="text/css" media="screen" />
 
-<link rel="stylesheet" href="css/ui.dropdownchecklist.standalone.css" type="text/css" media="screen" />
-
-
-<!--[if lt IE 9]>
-<script src="js/html5.js"></script>
-<![endif]-->
-
+	<script src="js/modernizr.custom.min.js"></script>
 
 </head>
 <body id="registration-section">
@@ -33,64 +27,66 @@
 	<!-- main content of the page -->
 	<div id="main-content">
 		<h2>Registration</h2>
-	<div class="form-block">
-		<div class="step">1</div>
-		<h3>Have you registered for any of the following programs previously?</h3>
-		<ul>
-			<li>Respect in Sport</li>
-			<li>Respect in Sport for Hockey Canada (SpeakOut Online)</li>
-			<li>The Parent Program</li>
-			<li>Respect in Soccer</li>
-			<li>Respect in School</li>
-			<li>Respect in the Workplace</li>
-		</ul>
-	</div>
-	<div class="form-block">
-		<div class="step">2</div>
-		<h3>If No, Click Continue <a href="#" class="button blarge flt-right">Continue</a></h3>
-	</div>
-	<div class="form-block">
-		<div class="step">3</div>
-		<h3>If Yes, let's start registration by accessing your existing profile.</h3>
-		<p>You may access your profile by any of the two ways listed below.</p>
-			<div class="button-set clearfix">
-				<a href="#" id="button-user-password" class="button blarge flt-left">Username &amp; Password</a>
-				<a href="#" id="button-first-last" class="button blarge flt-left">First and Last Name</a>
-				<br class="clearfloat" />
+		<div class="form-block with-step">
+			<div class="step">1</div>
+			<h3>Have you registered for any of the following programs previously?</h3>
+			<ul>
+				<li>Respect in Sport</li>
+				<li>Respect in Sport for Hockey Canada (SpeakOut Online)</li>
+				<li>The Parent Program</li>
+				<li>Respect in Soccer</li>
+				<li>Respect in School</li>
+				<li>Respect in the Workplace</li>
+			</ul>
+		</div>
+		
+		<div class="form-block with-step">
+			<div class="step">2</div>
+			<h3>If No, Click Continue</h3>
+			<a href="#" class="button blarge next-button">Continue</a>
+		</div>
+		
+		<div class="form-block with-step">
+			<div class="step">3</div>
+			<h3>If Yes, let's start registration by accessing your existing profile.</h3>
+			<p>You may access your profile by any of the two ways listed below.</p>
+			<div class="form-button-bar">
+				<a href="#" id="button-user-password" class="button blarge">Username &amp; Password</a>
+				<a href="#" id="button-first-last" class="button blarge">First and Last Name</a>
 			</div>
-			<div id="register-options">
+			<div class="registration-options">
 				<div id="register-user-password">
 					<form action="#" class="register-form" method="post" name="login">
-					<label> 
-						<span>Username</span>
-					<input type="text" class="text-input" name="username"  required="required"/>
-					</label>
-					<label> 
-						<span>Password</span>
-						<input type="password" class="text-input" name="password" required="required"/>
-					</label>
-					<button type="submit" class="login-button">
-						SUBMIT
-					</button>
-				</form>
+						<div class="input-holder">
+							<label for="username">Username</label>
+							<input type="text" name="username" required="required"/>
+						</div>
+						<div class="input-holder">
+							<label for="password">Password</label>
+							<input type="password" name="password" required="required"/>
+						</div>
+						<div class="form-button-bar">
+							<button type="submit">Submit</button>
+						</div>
+					</form>
 				</div>
 				<div id="register-first-last">
 					<form action="#" class="register-form" method="post" name="login">
-					<label> 
-						<span>First Name</span>
-					<input type="text" class="text-input" name="firstname"  required="required"/>
-					</label>
-					<label> 
-						<span>Last Name</span>
-						<input type="text" class="text-input" name="lastname" required="required"/>
-					</label>
-					<button type="submit" class="login-button">
-						SUBMIT
-					</button>
-				</form>
+						<div class="input-holder">
+							<label for="firstname">First Name</label>
+							<input type="text" name="firstname"  required="required"/>
+						</div>
+						<div class="input-holder">
+							<label for="lastname">Last Name</label>
+							<input type="text" name="lastname"  required="required"/>
+						</div>
+						<div class="form-button-bar">
+							<button type="submit">Submit</button>
+						</div>
+					</form>
 				</div>
 			</div>
-	</div>	
+		</div>	
 	</div>
 	<!-- side content of the page right -->
 	<div id="side-content-right">
@@ -128,14 +124,16 @@ $(document).ready(function(){
 	registerUserPass.hide();
 	registerName.hide();
 
-	buttonUserPass.click(function() {
-		   registerName.hide();
-		   registerUserPass.show();
+	buttonUserPass.click(function(e) {
+		e.preventDefault();
+		registerName.hide();
+		registerUserPass.show();
 	});
 
-	buttonName.click(function() {
-		   registerUserPass.hide();
-		   registerName.show();
+	buttonName.click(function(e) {
+		e.preventDefault();
+		registerUserPass.hide();
+		registerName.show();
 	});
 	
 });
