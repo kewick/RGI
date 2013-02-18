@@ -3,11 +3,13 @@
 <head>
 	<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
 	<title>Respect Group New Registration</title>
+	
 	<link rel="stylesheet" href="css/normalize.css" type="text/css" media="screen" />
+	<link rel="stylesheet" href="js/plugins/qtip/jquery.qtip.min.css" type="text/css" media="screen" />
+	
 	<link rel="stylesheet" href="css/styles.css" type="text/css" media="screen" />
 	<link rel="stylesheet" href="css/ris.css" type="text/css" media="screen" />
-	<link rel="stylesheet" href="css/jquery-ui-1.8.4.custom.css" type="text/css" media="screen" />
-
+	
 	<script src="js/modernizr.custom.min.js"></script>
 	
 </head>
@@ -85,37 +87,21 @@
 </div>
 
 
+
 <script src="js/jquery.min.js"></script>
+<script src="js/plugins/jquery.shuffle.js"></script>
+<script src="js/plugins/qtip/jquery.qtip.min.js"></script>
+
 <script src="js/scripts.js"></script>
-<script src="js/jquery-ui-1.8.13.custom.min.js"></script>
+<script src="js/PageController.js"></script>
+
 
 
 <script>
-$(document).ready(function(){
+jQuery(function(){
 	
-	if ($('.fadein').find('img').size()!==1) {
-			$('.fadein img').shuffle();
-			$('.fadein img:gt(0)').hide();
-			setInterval(function(){$('.fadein :first-child').fadeOut().next('img').fadeIn().end().appendTo('.fadein');}, 5000);
-	}
+	var pageController = new RGI.PageController();
 	
-	var registerUserPass = $('#register-user-password'),
-    registerName = $('#register-first-last'),
-    buttonUserPass = $('#button-user-password');
-    buttonName = $('#button-first-last');
-
-	registerUserPass.hide();
-	registerName.hide();
-
-	buttonUserPass.click(function() {
-		   registerName.hide();
-		   registerUserPass.show();
-	});
-
-	buttonName.click(function() {
-		   registerUserPass.hide();
-		   registerName.show();
-	});
 });
 </script>
 

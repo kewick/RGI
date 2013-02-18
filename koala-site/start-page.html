@@ -6,9 +6,10 @@
 	<title>Respect Group Start Page</title>
 
 	<link rel="stylesheet" href="css/normalize.css" type="text/css" media="screen" />
+	<link rel="stylesheet" href="js/plugins/qtip/jquery.qtip.min.css" type="text/css" media="screen" />
+	
 	<link rel="stylesheet" href="css/styles.css" type="text/css" media="screen" />
 	<link rel="stylesheet" href="css/ris.css" type="text/css" media="screen" />
-	<link rel="stylesheet" href="css/jquery-ui-1.8.4.custom.css" type="text/css" media="screen" />
 
 	<script src="js/modernizr.custom.min.js"></script>
 
@@ -80,21 +81,24 @@
 </div>
 
 
+
 <script src="js/jquery.min.js"></script>
+<script src="js/plugins/jquery.shuffle.js"></script>
+<script src="js/plugins/qtip/jquery.qtip.min.js"></script>
+
 <script src="js/scripts.js"></script>
-<script src="js/jquery-ui-1.8.13.custom.min.js"></script>
+<script src="js/PageController.js"></script>
+
 
 <script>
-$(document).ready(function(){	
+jQuery(function(){
+	
+	var pageController = new RGI.PageController();
+		
 	// Ajax request for html file on server
 	$.get('language-select.html', function(data){
 		modalBox.openModal({modalContent: data});
-}	);
-	if ($('.fadein').find('img').size()!==1) {
-			$('.fadein img').shuffle();
-			$('.fadein img:gt(0)').hide();
-			setInterval(function(){$('.fadein :first-child').fadeOut().next('img').fadeIn().end().appendTo('.fadein');}, 5000);
-	}
+	});
 });
 </script>
 

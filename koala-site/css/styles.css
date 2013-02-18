@@ -39,6 +39,7 @@ a:focus{
 }
 
 h1, h2, h3, h4{
+	color:#00609c;
 	font-family: "Myriad Pro", Myriad, "Liberation Sans", "Nimbus Sans L", "Helvetica Neue", Helvetica, Arial, sans-serif;
 	font-weight: normal;
 	margin-top:0;
@@ -182,6 +183,11 @@ select:focus{
 
 .form-block .input-holder select{
 	margin-top:7px;
+}
+
+.form-block .input-holder.dob select{
+	margin-right:5px;
+	width:100px;
 }
 
 .form-block .radio-input-holder{

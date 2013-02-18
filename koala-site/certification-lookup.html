@@ -1,21 +1,18 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
-<title>Respect Group Start Page</title>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+	<title>Respect Group Start Page</title>
 
+	
 	<link rel="stylesheet" href="css/normalize.css" type="text/css" media="screen" />
+	<link rel="stylesheet" href="js/plugins/qtip/jquery.qtip.min.css" type="text/css" media="screen" />
+	
 	<link rel="stylesheet" href="css/styles.css" type="text/css" media="screen" />
 	<link rel="stylesheet" href="css/ris.css" type="text/css" media="screen" />
-	<link rel="stylesheet" href="css/jquery-ui-1.8.4.custom.css" type="text/css" media="screen" />
 
-
-
-	<!--[if lt IE 9]>
-	<script src="js/html5.js"></script>
-	<![endif]-->
-
-
+	<script src="js/modernizr.custom.min.js"></script>
+	
 </head>
 
 
@@ -45,7 +42,7 @@
 					<label for="lastname">Last Name</label>
 					<input type="text" name="lastname"  required="required"/>
 				</div>
-				<div class="input-holder">
+				<div class="input-holder dob">
 					<label for="date-of-birth">Date of Birth</label>
 					<select name="dob-year"  required="required">
 						<option> - Year - </option>
@@ -224,18 +221,18 @@
 
 
 <script src="js/jquery.min.js"></script>
+<script src="js/plugins/jquery.shuffle.js"></script>
+<script src="js/plugins/qtip/jquery.qtip.min.js"></script>
+
 <script src="js/scripts.js"></script>
-<script src="js/jquery-ui-1.8.13.custom.min.js"></script>
+<script src="js/PageController.js"></script>
+
 
 
 <script>
-$(document).ready(function(){
+jQuery(function(){
 	
-	if ($('.fadein').find('img').size()!==1) {
-			$('.fadein img').shuffle();
-			$('.fadein img:gt(0)').hide();
-			setInterval(function(){$('.fadein :first-child').fadeOut().next('img').fadeIn().end().appendTo('.fadein');}, 5000);
-	}
+	var pageController = new RGI.PageController();
 	
 });
 </script>
