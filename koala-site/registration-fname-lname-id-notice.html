@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+	<title>Respect Group Registration Choice</title>
+
+	<link rel="stylesheet" href="css/normalize.css" type="text/css" media="screen" />
+	<link rel="stylesheet" href="js/plugins/qtip/jquery.qtip.min.css" type="text/css" media="screen" />
+	
+	<link rel="stylesheet" href="css/styles.css" type="text/css" media="screen" />
+	<link rel="stylesheet" href="css/ris.css" type="text/css" media="screen" />
+
+	<script src="js/modernizr.custom.min.js"></script>
+
+</head>
+<body id="registration-section">
+<div class="container"> 
+	<!-- the header -->
+	<header>
+		<div class="image-wrapper">
+			<div class="fadein">
+				<img src="images/sport-man-lrg.gif" />
+				<img src="images/ris-lrg.gif" />
+			</div>
+		</div>
+	</header>
+	<!-- main content of the page -->
+	<div id="main-content">
+		<h2>ID Question Does Not Match</h2>
+		<div class="info-box">
+			<p><img src="images/important-icon.gif" />The response to the ID Question does not match with our records for this user. Please try again or return to the previous page to try and alternate method.</p>
+		</div>
+		<div class="form-block">
+			<div class="id-questions">
+				<form action="#" class="register-form" method="post" name="login">
+					<div class="input-holder">
+						<label for="id-question">ID Question</label>
+						<input type="text" name="id-answer" required="required"/>
+					</div>
+					<div class="form-button-bar">
+						<button type="submit">Submit</button>
+					</div>
+				</form>
+			</div>
+		</div>	
+	</div>
+	<!-- side content of the page right -->
+	<div id="side-content-right">
+		<div id="logo-menu">
+			<img src="images/sport-man-sml.gif" />
+			<img src="images/coaching-man-small.gif" />
+			<img src="images/ris-logo-sml.gif" />
+		</div>
+		<a href="#" class="button blarge sidebar-button">Return to Start Page</a>
+		<a href="#" class="button blarge sidebar-button">Return to Previous Page</a>
+	</div>	
+	
+	<!-- footer -->
+	<footer>
+			<p>Respect in Sport is a registered trademark of Respect Group Inc.</p>
+	</footer>
+</div>
+
+<script src="js/jquery.min.js"></script>
+<script src="js/plugins/jquery.shuffle.js"></script>
+<script src="js/plugins/qtip/jquery.qtip.min.js"></script>
+
+<script src="js/scripts.js"></script>
+<script src="js/PageController.js"></script>
+
+<script>
+jQuery(function(){
+	
+	var pageController = new RGI.PageController();
+	
+});
+</script>
+
+</body>
+</html>

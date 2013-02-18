@@ -34,11 +34,11 @@
 			<form action="#" class="register-form" method="post" name="login">
 				<div class="input-holder">
 					<label for="username">Username</label>
-					<input type="text" name="username" required="required"/>
+					<input type="text" name="username" required="required" class="showTip"/>
 				</div>
 				<div class="input-holder">
 					<label for="password">Password</label>
-					<input type="password" name="password" required="required"/>
+					<input type="password" name="password" required="required" class="showTip"/>
 				</div>
 				<div class="input-holder">
 					<label for="confirmpassword">Confirm Password</label>
@@ -54,7 +54,7 @@
 				</div>
 				<div class="input-holder">
 					<label for="email">Email</label>
-					<input type="email" name="email"  required="required"/>
+					<input type="email" name="email"  required="required" class="showTip"/>
 				</div>
 				<div class="input-holder">
 					<label for="email">Association</label>
@@ -101,6 +101,35 @@
 jQuery(function(){
 	
 	var pageController = new RGI.PageController();
+	
+	var tipContents = [
+		'May we recommend your email', 
+		'Password must be 8 characters or more, one number and one uppercase letter',
+		'Proper email is required'
+		];
+	
+	$('.register-form input.showTip').each(function(i)
+	{
+	   $(this).qtip({
+		  content: tipContents[i], 
+			show: {
+				ready: false,
+				solo: false,
+				when: false
+			},
+			hide: {
+				when: "unfocus"
+			},
+		  style: 'qtipinfo',
+		  position: {
+			 corner: {
+				tooltip: 'leftMiddle', 
+				target: 'rightMiddle' 
+			 }
+		  }
+	   });
+	});
+	
 	
 });
 </script>
