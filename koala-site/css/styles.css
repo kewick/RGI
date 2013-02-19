@@ -118,7 +118,27 @@ textarea:focus,
 select:focus{
 	background-color:#8ec9e8;
 	border:1px solid #00609c;
-	outline:1px solid #d5e5ee;
+	outline:1px solid #fff;
+}
+
+form .input-error{
+	background-color:#ffd9d9;
+	border:1px solid #8a1515;
+}
+
+form .input-error:focus{
+	background-color:#fdabab;
+	border:1px solid #8a1515;
+}
+
+form .input-valid{
+	background-color:#e7fae3;
+	border:1px solid #2e6f0b;
+}
+
+form .input-valid:focus{
+	background-color:#c6f1be;
+	border:1px solid #2e6f0b;
 }
 
 .form-block {
@@ -341,28 +361,13 @@ footer  p{
 *:first-child+html .clearfix { zoom: 1; } /* IE7 */
 
 
-/* MODAL
+/* QTIP SETTINGS
 ------------------------------------------------------------------------------------*/
-#page-overlay {
-    position: fixed; 
-	width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    background: #000;
-    opacity: 0.97;
-    /*--for ie */filter: alpha(opacity=90);
+.qtip-modal{
+	max-width:none;
 }
 
-#modal-box {
-    position:absolute;
-    border: 2px solid #00609c;
-}
 
-#modal-content {
-    background:#fff;
-	padding:20px;
-}
 
 /* START PAGE
 ------------------------------------------------------------------------------------*/

@@ -52,18 +52,18 @@
 			<form action="#" method="post" name="login">
 				<div class="input-holder">
 					<label for="username">Username</label>
-					<input type="text" name="username" required="required"/>
+					<input type="text" name="username" required="required" data-error-pos="left"/>
 				</div>
 				<div class="input-holder">
 					<label for="password">Password</label>
-					<input type="password" name="password" required="required"/>
+					<input type="password" name="password" required="required" data-error-pos="left"/>
 				</div>
 				<div class="radio-input-holder">
-					<input type="checkbox" value="remember_username" />
+					<input type="checkbox" name="remember_username" value="remember_username" />
 					<label>Remember Username</label>
 				</div>
 				<div class="radio-input-holder">
-					<input type="checkbox" value="low_bandwidth" />
+					<input type="checkbox" name="low_bandwidth" value="low_bandwidth" />
 					<label>Low Bandwidth </label>
 				</div>
 				
@@ -76,7 +76,7 @@
 	<br class="clearfloat" />	 
 	<!-- footer -->
 	<footer>
-			<p>Respect in Sport is a registered trademark of Respect Group Inc.</p>
+		<p>Respect in Sport is a registered trademark of Respect Group Inc.</p>
 	</footer>
 </div>
 
@@ -84,10 +84,11 @@
 
 <script src="js/jquery.min.js"></script>
 <script src="js/plugins/jquery.shuffle.js"></script>
+<script src="js/plugins/jquery.validate.js"></script>
 <script src="js/plugins/qtip/jquery.qtip.min.js"></script>
 
-<script src="js/scripts.js"></script>
-<script src="js/PageController.js"></script>
+<script src="js/RGI.js"></script>
+<script src="js/RGI.PageController.js"></script>
 
 
 <script>
@@ -95,10 +96,24 @@ jQuery(function(){
 	
 	var pageController = new RGI.PageController();
 		
-	// Ajax request for html file on server
-	$.get('language-select.html', function(data){
-		modalBox.openModal({modalContent: data});
-	});
+	jQuery("body").qtip(RGI.Helpers.getCustomQtipSettings(
+		RGI.QtipSettings.Modal,
+		{
+			id : "language-modal",
+			content : {
+				ajax : {url : "language-select.html"}
+			},
+			events : {
+				render : function(event, api){
+					api.elements.content.on("click", "#lang-english a", function(e){
+						e.preventDefault();
+						api.destroy();
+					});
+				}
+			}
+		}
+	));
+	
 });
 </script>
 
