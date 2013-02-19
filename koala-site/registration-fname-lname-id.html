@@ -35,7 +35,7 @@
 			<div class="id-questions">
 				<form action="#" class="register-form" method="post" name="login">
 					<div class="input-holder">
-						<label for="id-question">ID Question</label>
+						<label for="id-answer">ID Question</label>
 						<input type="text" name="id-answer" required="required"/>
 					</div>
 					<div class="form-button-bar">
@@ -64,15 +64,28 @@
 
 <script src="js/jquery.min.js"></script>
 <script src="js/plugins/jquery.shuffle.js"></script>
+<script src="js/plugins/jquery.validate.js"></script>
 <script src="js/plugins/qtip/jquery.qtip.min.js"></script>
 
-<script src="js/scripts.js"></script>
-<script src="js/PageController.js"></script>
+<script src="js/RGI.js"></script>
+<script src="js/RGI.PageController.js"></script>
+
 
 <script>
 jQuery(function(){
 	
-	var pageController = new RGI.PageController();
+	var pageController = new RGI.PageController({
+		extraValidateSettings : {
+			rules : {
+				"id-answer" : { required : true, minlength : 3 }
+			},
+			messages : {
+				"id-answer" : {
+					required : "Please enter an answer"
+				}
+			}
+		}
+	});
 	
 });
 </script>

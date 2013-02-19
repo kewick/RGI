@@ -76,8 +76,8 @@
 			validClass: 'input-valid',
 			rules: {
 				"username" : { required: true, minlength: 3 },
-				"password" : { required: true, minlength: 3 },
-				"confirmpassword" : { required: true, minlength: 3, equalTo:"[name='password']" },
+				"password" : { required: true, minlength: 8 },
+				"confirmpassword" : { required: true, minlength: 8, equalTo:"[name='password']" },
 				"firstname" : { required: true, minlength: 3 },
 				"lastname" : { required: true, minlength: 3 },
 				"email" : { required: true, email: true },
@@ -94,7 +94,7 @@
 				},
 				"password" : {
 					required: "Please provide a password",
-					minlength: "Your password must be at least 3 characters long"
+					minlength: "Your password must be at least 8 characters long"
 				},
 				"confirmpassword" : {
 					required: "Please provide a password",
