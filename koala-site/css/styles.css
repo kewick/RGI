@@ -193,7 +193,10 @@ form .input-valid:focus{
 	height: 16px;
 }
 
-.form-block .input-holder input,
+.form-block .input-holder input[type="text"],
+.form-block .input-holder input[type=email],
+.form-block .input-holder input[type=password],
+.form-block .input-holder input[type=number],
 .form-block .input-holder select,
 .form-block .input-holder textarea{
 	float:left;
@@ -212,6 +215,10 @@ form .input-valid:focus{
 
 .form-block .radio-input-holder{
 	padding:5px;
+}
+
+.form-block .input-holder .radio-input-holder{
+	padding-top:8px;
 }
 
 
