@@ -57,14 +57,45 @@
 					<input type="email" name="email"  required="required" class="showTip"/>
 				</div>
 				<div class="input-holder">
-					<label for="association">Association</label>
-					<select id="s1" class="s1" abindex='8' name="association"  required="required">
-						<option>Low</option>
-						<option>Medium</option>
-						<option>High</option>
+					<label for="gender-male">Male</label>
+					<input type="radio" name="gender" value="M"  required="required">
+					<label for="gender-female">Female</label>
+					<input type="radio" name="gender" value="F"  required="required">
+				</div>
+				<div class="input-holder">
+					<label for="postal-code">Postal Code</label>
+					<input type="text" name="addressPostalCode"  required="required"/>
+				</div>
+				<div class="input-holder">
+					<label for="postal-code">NCCP #</label>
+					<input type="text" name="sm_nccp"  required="required"/>
+				</div>
+				<div class="input-holder">
+					<label for="security-question">Select your Secure Question</label>
+					<select>
+					  <option value="secure-city" selected>What city were you born in? </option>
+					  <option value="secure-school">What high school did you attend? </option>
+					  <option value="secure-pet">Name of 1st pet?</option>
+					  <option value="secure-car">What was your 1st car?</option>
+					  <option value="secure-honeymoon">Where did you go on your honeymoon?</option>
+					  <option value="secure-self-enter">Select your own</option>
 					</select>
 				</div>
-				
+				<div class="input-holder">
+					<label for="security-question">Secure Question</label>
+					<input type="text" name="secure-self-question"  required="required"/>
+				</div>
+				<div class="input-holder">
+					<label for="security-choice-answer">Secure Answer</label>
+					<input type="text" name="secure-choice-answer"  required="required"/>
+				</div>
+				<div class="terms-scroll">
+					Privacy Policy will go here in scolling div.
+				</div>
+				<div class="input-holder">
+					<label for="accept-privacy-policy">Privacy Policy Accepted</label>
+					<input type="checkbox" name="policy" value="accepted" required="required">
+				</div>
 				<div class="form-button-bar">
 					<button type="submit">Submit</button>
 				</div>
