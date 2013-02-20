@@ -83,7 +83,8 @@
 				"email" : { required: true, email: true },
 				"dob-year" : { required: true, number: true},
 				"dob-month" : { required: true},
-				"dob-day" : { required: true, number: true}
+				"dob-day" : { required: true, number: true},
+				"policy" : {required:true}
 			},
 			messages: {
 				"firstname" : "Please enter your firstname",
@@ -104,7 +105,8 @@
 				"email" : "Please enter a valid email address",
 				"dob-year" : "Please select a year",
 				"dob-month" : "Please select a month",
-				"dob-day" : "Please select a day"
+				"dob-day" : "Please select a day",
+				"policy" : "Please accept our policy if you wish to continue"
 			},
 			errorPlacement: function(error, element){
 				// Set positioning based on the elements position in the form
