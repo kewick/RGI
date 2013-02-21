@@ -6,6 +6,7 @@
 	
 	<link rel="stylesheet" href="css/normalize.css" type="text/css" media="screen" />
 	<link rel="stylesheet" href="js/plugins/qtip/jquery.qtip.min.css" type="text/css" media="screen" />
+	<link rel="stylesheet" href="js/plugins/uiDatepicker/jquery-ui-1.10.1.custom.min.css" type="text/css" media="screen" />
 	
 	<link rel="stylesheet" href="css/styles.css" type="text/css" media="screen" />
 	<link rel="stylesheet" href="css/ris.css" type="text/css" media="screen" />
@@ -62,6 +63,10 @@
 						<input type="radio" name="gender" value="M"  required="required"> Male
 						<input type="radio" name="gender" value="F"  required="required"> Female
 					</div>
+				</div>
+				<div class="input-holder">
+					<label for="birth-date">Date of Birth</label>
+					<input type="text" name="birthdate" id="datepicker"  required="required"/>
 				</div>
 				<div class="input-holder">
 					<label for="postal-code">Postal Code</label>
@@ -125,6 +130,7 @@
 <script src="js/plugins/jquery.shuffle.js"></script>
 <script src="js/plugins/jquery.validate.js"></script>
 <script src="js/plugins/qtip/jquery.qtip.min.js"></script>
+<script src="js/plugins/uiDatepicker/jquery-ui-1.10.1.custom.min.js"></script>
 
 <script src="js/RGI.js"></script>
 <script src="js/RGI.PageController.js"></script>
@@ -163,6 +169,10 @@ jQuery(function(){
 	   });
 	});*/
 	
+	$( "#datepicker" ).datepicker({
+		  changeMonth: true,
+		  changeYear: true
+    });
 	
 });
 </script>
