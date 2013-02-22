@@ -57,29 +57,15 @@
 
 <script src="js/jquery.min.js"></script>
 <script src="js/plugins/jquery.shuffle.js"></script>
-<script src="js/plugins/jquery.validate.js"></script>
-<script src="js/plugins/qtip/jquery.qtip.min.js"></script>
 
 <script src="js/RGI.js"></script>
 <script src="js/RGI.PageController.js"></script>
 
 
 <script>
+
 jQuery(function(){
-	
-	var pageController = new RGI.PageController({
-		extraValidateSettings : {
-			rules : {
-				"pre-registration-code" : { required : true, minlength : 3 }
-			},
-			messages : {
-				"pre-registration-code" : {
-					required : "Please enter a valid Registration Code"
-				}
-			}
-		}
-	});
-	
+	var pageController = new RGI.PageController();
 });
 </script>
 
