@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+	<title>Respect Group - Registration Codes</title>
+
+	<link rel="stylesheet" href="css/normalize.css" type="text/css" media="screen" />
+	<link rel="stylesheet" href="js/plugins/qtip/jquery.qtip.min.css" type="text/css" media="screen" />
+	
+	<link rel="stylesheet" href="css/styles.css" type="text/css" media="screen" />
+	<link rel="stylesheet" href="css/ris.css" type="text/css" media="screen" />
+
+	<script src="js/modernizr.custom.min.js"></script>
+
+</head>
+<body id="registration-section">
+<div class="container"> 
+	<!-- the header -->
+	<header>
+		<div class="image-wrapper">
+			<div class="fadein">
+				<img src="images/sport-man-lrg.gif" />
+				<img src="images/ris-lrg.gif" />
+			</div>
+		</div>
+	</header>
+	 
+	<!-- main content of the page -->
+	<div id="main-content">
+		<h2>Registration</h2>
+		<p>To complete registration and gain access to all the content, handouts and features this Respect Group program has to offer, please select the "Purchase" link below beside the appropriate program name.</p>
+		<p>Please read the note below and select Proceed to Checkout when you are ready.</p>
+		<p>Program for Purcase:</p>
+		<p>For your security, Respect Group Inc. helpdesk personnel are not able to provide purchase assistance. Please contact your organization or association if required</p>
+		<p>When you select Proceed to Checkout, you will automatically be redirected to the website PayPal.com. At PayPal, you may log into an existing PayPal account create a new account, or pay by credit card without a PayPal account.</p>
+		<p>Once your transaction has been completed, you should be redirected back to this program. If you are not automatically redirected, a link or button may appear prompting you to click on them to return to the program. A receipt for the purchase will be emailed to the email address on file immediately after the transaction has completed. A copy of your receipt will also be available via the profile button in this program.</p>
+		<p>After payment has been completed, you will have full and immediate access to this Respect Group Inc. program. Once you have started the program, no refunds may be provided.</p>
+		<p>Should you have difficulties during the payment process, please contact the PayPal helpdesk. The Respect Group helpdesk has no access to credit card information or receipts and is not able to provide any assistance related to the payment transaction.</p>
+		<p>Purchase Amount: <a href="#" class="button bsmall">Checkout</a></p>
+	</div>
+	<!-- side content of the page right -->
+	<div id="side-content-right">
+		<div id="logo-menu">
+			<img src="images/sport-man-sml.gif" />
+			<img src="images/coaching-man-small.gif" />
+			<img src="images/ris-logo-sml.gif" />
+		</div>
+		<a href="#" class="button blarge sidebar-button">Return to Start Page</a>
+		<a href="#" class="button blarge sidebar-button">Logout</a>
+	</div>	
+	
+	<!-- footer -->
+	<footer>
+			<p>Respect in Sport is a registered trademark of Respect Group Inc.</p>
+	</footer>
+</div>
+
+<script src="js/jquery.min.js"></script>
+<script src="js/plugins/jquery.shuffle.js"></script>
+<script src="js/plugins/jquery.validate.js"></script>
+<script src="js/plugins/qtip/jquery.qtip.min.js"></script>
+
+<script src="js/RGI.js"></script>
+<script src="js/RGI.PageController.js"></script>
+
+
+<script>
+jQuery(function(){
+	
+	var pageController = new RGI.PageController({
+		extraValidateSettings : {
+			rules : {
+				"pre-registration-code" : { required : true, minlength : 3 }
+			},
+			messages : {
+				"pre-registration-code" : {
+					required : "Please enter a valid Registration Code"
+				}
+			}
+		}
+	});
+	
+});
+</script>
+
+</body>
+</html>
