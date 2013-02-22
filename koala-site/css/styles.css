@@ -105,8 +105,8 @@ input[type=password],
 input[type=number],
 textarea,
 select{
-	background-color:#d5e5ee;
-	border:1px solid #00609c;
+	background-color:#fff;
+	border:1px solid #cccccc;
 	padding:5px;
 }
 
@@ -116,7 +116,7 @@ input[type=password]:focus,
 input[type=number]:focus,
 textarea:focus,
 select:focus{
-	background-color:#8ec9e8;
+	background-color:#d5e5ee;
 	border:1px solid #00609c;
 	outline:1px solid #fff;
 }
