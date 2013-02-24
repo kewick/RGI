@@ -5,8 +5,9 @@
 	<title>Respect Group - Child Managment</title>
 	
 	<link rel="stylesheet" href="css/normalize.css" type="text/css" media="screen" />
+	<link rel="stylesheet" href="css/jquery-ui-1.10.1.custom.min.css" type="text/css" media="screen" />
 	<link rel="stylesheet" href="js/plugins/qtip/jquery.qtip.min.css" type="text/css" media="screen" />
-	<link rel="stylesheet" href="js/plugins/uiDatepicker/jquery-ui-1.10.1.custom.min.css" type="text/css" media="screen" />
+	<link rel="stylesheet" href="js/plugins/checkboxtree/jquery.checkboxtree.css" type="text/css" media="screen" />
 	
 	<link rel="stylesheet" href="css/styles.css" type="text/css" media="screen" />
 	<link rel="stylesheet" href="css/ris.css" type="text/css" media="screen" />
@@ -30,6 +31,11 @@
 	<!-- main content of the page -->
 	<div id="main-content">
 		<h2>Child Managment</h2>
+		<div class="info-box">
+			<p><img src="images/important-icon.gif" /><strong>Important information for hockey parents</strong>. Information entered here is very important to ensure you are given proper credit for completing this program. This is achieved by connecting your Parent Program certification number to your child's hockey profile.  Please enter all your children who currently play hockey. You may return here to add children in the future.  Please ensure the first name, last name and date of birth are entered in the same fashion as they have been provided to the minor hockey association.</p>
+			<p>Enter your child's information.  Once this is complete hit submit and out system will communicate with Hockey Canada to identify if an existing profile exists.</p>
+		</div>
+		<div class="form-block">
 			<form action="#" class="register-form" method="post" name="child-information">
 				<div class="input-holder">
 					<label for="firstname">First Name</label>
@@ -50,17 +56,38 @@
 					<label for="birth-date">Date of Birth</label>
 					<input type="text" name="birthdate" id="datepicker"  required="required"/>
 				</div>
+				<div class="input-holder">
+					<label for="association">Association</label>
+					<!-- checkbox-tree class is needed to initialize the plugin -->
+					<ul id="association" class="checkbox-tree">
+						<li>
+							<input type="checkbox" name="association" value="1" /><label>Test</label>
+							<ul>
+								<li><input type="checkbox" name="association" value="1-a" /><label>Test</label></li>
+								<li><input type="checkbox" name="association" value="1-b" /><label>Test</label></li>
+							</ul>
+						</li>
+						<li>
+							<input type="checkbox" name="association" value="2" /><label>Test</label>
+							<ul>
+								<li><input type="checkbox" name="association" value="2-a" /><label>Test</label></li>
+								<li><input type="checkbox" name="association" value="2-b" /><label>Test</label></li>
+							</ul>
+						</li>
+					</ul>
+				</div>
 				<div class="form-button-bar">
 					<button type="submit">Submit</button>
-					<a href="#" class="button bsmall">No Children to Add</a>
+					<button type="button">No Children to Add</button>
 				</div>
 			</form>
-			<div id="child-list">
-				<h3>Associated Children</h3>
-				<ul>
-					<li>Placeholder</li>
-				</ul>
-			</div>	
+		</div>
+		<div id="child-list">
+			<h3>Associated Children</h3>
+			<ul>
+				<li>Placeholder</li>
+			</ul>
+		</div>	
 	</div>
 	<!-- side content of the page right -->
 	<div id="side-content-right">
@@ -80,10 +107,11 @@
 
 
 <script src="js/jquery.min.js"></script>
+<script src="js/jquery-ui-1.10.1.custom.min.js"></script>
 <script src="js/plugins/jquery.shuffle.js"></script>
 <script src="js/plugins/jquery.validate.js"></script>
 <script src="js/plugins/qtip/jquery.qtip.min.js"></script>
-<script src="js/plugins/uiDatepicker/jquery-ui-1.10.1.custom.min.js"></script>
+<script src="js/plugins/checkboxtree/jquery.checkboxtree.js"></script>
 
 <script src="js/RGI.js"></script>
 <script src="js/RGI.PageController.js"></script>

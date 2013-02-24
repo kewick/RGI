@@ -322,6 +322,7 @@ header .image-wrapper {
 ------------------------------------------------------------------------------------*/
 #side-content-right {
 	float: left;
+	margin-bottom:25px;
 	width: 295px;
 }
 

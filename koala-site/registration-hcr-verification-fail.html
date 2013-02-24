@@ -5,8 +5,8 @@
 	<title>Respect Group - Child Managment</title>
 	
 	<link rel="stylesheet" href="css/normalize.css" type="text/css" media="screen" />
+	<link rel="stylesheet" href="css/jquery-ui-1.10.1.custom.min.css" type="text/css" media="screen" />
 	<link rel="stylesheet" href="js/plugins/qtip/jquery.qtip.min.css" type="text/css" media="screen" />
-	<link rel="stylesheet" href="js/plugins/uiDatepicker/jquery-ui-1.10.1.custom.min.css" type="text/css" media="screen" />
 	
 	<link rel="stylesheet" href="css/styles.css" type="text/css" media="screen" />
 	<link rel="stylesheet" href="css/ris.css" type="text/css" media="screen" />
@@ -30,7 +30,17 @@
 	<!-- main content of the page -->
 	<div id="main-content">
 		<h2>Hockey Canada Registry - Record Not Found</h2>
-		<p></p>
+		<div class="info-box">
+			<p><img src="images/important-icon.gif" /> No matching record has been found in the Hockey Canada Registry. This could be because:</p>
+			<ol>
+				<li>The first name, last name or date of birth have been entered incorrectly. Please check the spelling of names and the date of birth.</li>
+				<li>The child's profile in the Hockey Canada Registry has been entered differently. Examples would be Michael vs Mike or Kimberley vs Kim.</li>
+				<li>The child has not been registered for hockey yet.</li>
+				<li>The registrar has not added the profile to the Hockey Canada Registry. Many registrars wait until rosters have been completed before entering players in the HCR.</li>
+				<li>The child has an existing profile which is registered to a different minor hockey association.</li>
+			</ol>
+			<p>To avoid duplicate records, please verify the first name, last name, date of birth and association are correct and we will check the Hockey Canada Registry again.</p>
+		</div>
 		<a href="#" class="button bsmall">Let Me Correct an Error</a>
 		<a href="#" class="button bsmall">Information Entered is Correct</a>
 	</div>
@@ -51,10 +61,10 @@
 
 
 <script src="js/jquery.min.js"></script>
+<script src="js/jquery-ui-1.10.1.custom.min.js"></script>
 <script src="js/plugins/jquery.shuffle.js"></script>
 <script src="js/plugins/jquery.validate.js"></script>
 <script src="js/plugins/qtip/jquery.qtip.min.js"></script>
-<script src="js/plugins/uiDatepicker/jquery-ui-1.10.1.custom.min.js"></script>
 
 <script src="js/RGI.js"></script>
 <script src="js/RGI.PageController.js"></script>
