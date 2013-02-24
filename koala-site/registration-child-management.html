@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+	<title>Respect Group - Child Managment</title>
+	
+	<link rel="stylesheet" href="css/normalize.css" type="text/css" media="screen" />
+	<link rel="stylesheet" href="js/plugins/qtip/jquery.qtip.min.css" type="text/css" media="screen" />
+	<link rel="stylesheet" href="js/plugins/uiDatepicker/jquery-ui-1.10.1.custom.min.css" type="text/css" media="screen" />
+	
+	<link rel="stylesheet" href="css/styles.css" type="text/css" media="screen" />
+	<link rel="stylesheet" href="css/ris.css" type="text/css" media="screen" />
+	
+	<script src="js/modernizr.custom.min.js"></script>
+	
+</head>
+
+
+<body id="registration-section">
+<div class="container clearfix"> 
+	<!-- the header -->
+	<header>
+		<div class="image-wrapper">
+			<div class="fadein">
+				<img src="images/sport-man-lrg.gif" />
+				<img src="images/ris-lrg.gif" />
+			</div>
+		</div>
+	</header>
+	<!-- main content of the page -->
+	<div id="main-content">
+		<h2>Child Managment</h2>
+			<form action="#" class="register-form" method="post" name="child-information">
+				<div class="input-holder">
+					<label for="firstname">First Name</label>
+					<input type="text" name="firstname"  required="required"/>
+				</div>
+				<div class="input-holder">
+					<label for="lastname">Last Name</label>
+					<input type="text" name="lastname"  required="required"/>
+				</div>
+				<div class="input-holder">
+					<label for="gender">Gender</label>
+					<div class="radio-input-holder">
+						<input type="radio" name="gender" value="M"  required="required"> Male
+						<input type="radio" name="gender" value="F"  required="required"> Female
+					</div>
+				</div>
+				<div class="input-holder">
+					<label for="birth-date">Date of Birth</label>
+					<input type="text" name="birthdate" id="datepicker"  required="required"/>
+				</div>
+				<div class="form-button-bar">
+					<button type="submit">Submit</button>
+					<a href="#" class="button bsmall">No Children to Add</a>
+				</div>
+			</form>
+			<div id="child-list">
+				<h3>Associated Children</h3>
+				<ul>
+					<li>Placeholder</li>
+				</ul>
+			</div>	
+	</div>
+	<!-- side content of the page right -->
+	<div id="side-content-right">
+		<div id="logo-menu">
+			<img src="images/sport-man-sml.gif" />
+			<img src="images/coaching-man-small.gif" />
+			<img src="images/ris-logo-sml.gif" />
+		</div>
+		<a href="#" class="button blarge sidebar-button">Logout</a>
+		<a href="#" class="button blarge sidebar-button">No Children to Add</a>
+	</div>
+	<!-- footer -->
+	<footer>
+			<p>Respect in Sport is a registered trademark of Respect Group Inc.</p>
+	</footer>
+</div>
+
+
+<script src="js/jquery.min.js"></script>
+<script src="js/plugins/jquery.shuffle.js"></script>
+<script src="js/plugins/jquery.validate.js"></script>
+<script src="js/plugins/qtip/jquery.qtip.min.js"></script>
+<script src="js/plugins/uiDatepicker/jquery-ui-1.10.1.custom.min.js"></script>
+
+<script src="js/RGI.js"></script>
+<script src="js/RGI.PageController.js"></script>
+
+<script>
+jQuery(function(){
+	var pageController = new RGI.PageController();
+});
+</script>
+
+
+</body>
+</html>
