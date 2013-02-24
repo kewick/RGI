@@ -1,0 +1,30 @@
+.ui-widget-daredevel-checkboxTree{
+	border:none;
+	margin:0 0 5px 0;
+	padding-left:20;
+}
+
+.ui-widget-daredevel-checkboxTree li {
+    list-style-type: none;
+	padding:5px 0;
+    position: relative;
+}
+
+.ui-widget-daredevel-checkboxTree li span {
+    cursor: pointer;
+    position: absolute;
+    top: 3px;
+    left: -16px;
+}
+
+.ui-widget-daredevel-checkboxTree li input{
+	margin-right:5px;
+}
+
+.ui-widget-daredevel-checkboxTree li ul{
+	padding-left:20px;
+}
+
+.ui-widget-daredevel-checkboxTree.ui-widget-content .ui-icon{
+	background-image:url("ui-icons_222222_256x240.png");
+}

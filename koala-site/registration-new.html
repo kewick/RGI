@@ -7,6 +7,7 @@
 	<link rel="stylesheet" href="css/normalize.css" type="text/css" media="screen" />
 	<link rel="stylesheet" href="css/jquery-ui-1.10.1.custom.min.css" type="text/css" media="screen" />
 	<link rel="stylesheet" href="js/plugins/qtip/jquery.qtip.min.css" type="text/css" media="screen" />
+	<link rel="stylesheet" href="js/plugins/checkboxtree/jquery.checkboxtree.css" type="text/css" media="screen" />
 	
 	<link rel="stylesheet" href="css/styles.css" type="text/css" media="screen" />
 	<link rel="stylesheet" href="css/ris.css" type="text/css" media="screen" />
@@ -33,6 +34,8 @@
 		<h2>Program Registration</h2>
 		<div class="form-block">
 			<form action="#" class="register-form" method="post" name="login">
+				<input type="hidden" value="" name="secure-self-question" />
+				
 				<div class="input-holder">
 					<label for="username">Username</label>
 					<input type="text" name="username" required="required" class="showTip"/>
@@ -77,19 +80,41 @@
 					<input type="text" name="sm_nccp"  required="required"/>
 				</div>
 				<div class="input-holder">
-					<label for="security-question">Select your Secure Question</label>
-					<select>
-					  <option value="secure-city" selected>What city were you born in? </option>
-					  <option value="secure-school">What high school did you attend? </option>
-					  <option value="secure-pet">Name of 1st pet?</option>
-					  <option value="secure-car">What was your 1st car?</option>
-					  <option value="secure-honeymoon">Where did you go on your honeymoon?</option>
-					  <option value="secure-self-enter">Select your own</option>
-					</select>
+					<label for="association">Association</label>
+					<!-- checkbox-tree class is needed to initialize the plugin -->
+					<ul id="association" class="checkbox-tree">
+						<li>
+							<input type="checkbox" name="association" value="1" /><label>Test</label>
+							<ul>
+								<li><input type="checkbox" name="association" value="1-a" /><label>Test</label></li>
+								<li><input type="checkbox" name="association" value="1-b" /><label>Test</label></li>
+							</ul>
+						</li>
+						<li>
+							<input type="checkbox" name="association" value="2" /><label>Test</label>
+							<ul>
+								<li><input type="checkbox" name="association" value="2-a" /><label>Test</label></li>
+								<li><input type="checkbox" name="association" value="2-b" /><label>Test</label></li>
+							</ul>
+						</li>
+					</ul>
 				</div>
 				<div class="input-holder">
 					<label for="security-question">Secure Question</label>
-					<input type="text" name="secure-self-question"  required="required"/>
+					<!-- this select is just a dummy. real value from hidden input 'security-question' -->
+					<select name="choose-question">
+						<option value="" selected disabled>Select a question</option>
+						<option value="secure-city">What city were you born in? </option>
+						<option value="secure-school">What high school did you attend? </option>
+						<option value="secure-pet">Name of 1st pet?</option>
+						<option value="secure-car">What was your 1st car?</option>
+						<option value="secure-honeymoon">Where did you go on your honeymoon?</option>
+						<option value="secure-self-enter">Select your own</option>
+					</select>
+				</div>
+				<div class="input-holder" style="display:none;">
+					<label for="custom-question">Custom Security Question</label>
+					<input type="text" name="custom-question" id="custom-question" />
 				</div>
 				<div class="input-holder">
 					<label for="security-choice-answer">Secure Answer</label>
@@ -131,48 +156,57 @@
 <script src="js/plugins/jquery.shuffle.js"></script>
 <script src="js/plugins/jquery.validate.js"></script>
 <script src="js/plugins/qtip/jquery.qtip.min.js"></script>
+<script src="js/plugins/checkboxtree/jquery.checkboxtree.js"></script>
 
 <script src="js/RGI.js"></script>
 <script src="js/RGI.PageController.js"></script>
 
 <script>
+var pageController;
+
 jQuery(function(){
 	
-	var pageController = new RGI.PageController();
-	
-	var tipContents = [
-		'May we recommend your email', 
-		'Password must be 8 characters or more, one number and one uppercase letter',
-		'Proper email is required'
-		];
-	
-	/*
-	$('.register-form input.showTip').each(function(i)
-	{
-	   $(this).qtip({
-		  content: tipContents[i], 
-			show: {
-				ready: false,
-				solo: false,
-				when: false
+	pageController = new RGI.PageController({
+		extraValidateSettings : {
+			rules : {
+				"association" : {required : true},
+				"choose-question" : {required : true},
+				"secure-choice-answer" : {required : true}
 			},
-			hide: {
-				when: "unfocus"
-			},
-		  style: 'qtipinfo',
-		  position: {
-			 corner: {
-				tooltip: 'leftMiddle', 
-				target: 'rightMiddle' 
-			 }
-		  }
-	   });
-	});*/
+			messages : {
+				"association" : "Please select at least one item",
+				"choose-question" : "Please choose a question",
+				"custom-question" : "Please enter a custom question",
+				"secure-choice-answer" : "Please enter an answer"
+			}
+		}
+	});
 	
-	$( "#datepicker" ).datepicker({
-		  changeMonth: true,
-		  changeYear: true
-    });
+	
+	jQuery("select[name='choose-question']").on("change", function(){
+		var $target = jQuery(this);
+		var $customQuestionInput = jQuery("input#custom-question");
+		var $questionValueHolder = jQuery("input[name='secure-self-question']");
+		
+		//show the custom question box
+		if($target.val() == "secure-self-enter"){
+			$questionValueHolder.val("");
+			$customQuestionInput.parent().show();
+			$customQuestionInput.prop("required", true)
+			.on("keyup", function(){
+				$questionValueHolder.val($customQuestionInput.val()); //set value from the custom question
+			});
+		} 
+		
+		//hide custom question box
+		else {
+			$customQuestionInput.prop("required", false).parent().hide();
+			$questionValueHolder.val($target.val()); //set value from the select
+		}
+		
+		//need to update any qtips position
+		pageController.updateQtipPosition();
+	});
 	
 });
 </script>

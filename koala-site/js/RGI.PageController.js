@@ -9,6 +9,8 @@
 		var self = this;
 		var $parent = $("body");
 		
+		var $checkboxTree;
+		
 		self.options = {
 			defaultValidateSettings : RGI.FormValidateSettings.Main,
 			extraValidateSettings : {
@@ -25,6 +27,7 @@
 		function initialize(){
 			initSlideShow();
 			initForms();
+			initCheckboxTree();
 		}
 		initialize();
 		
@@ -35,6 +38,10 @@
 	 */
 		this.removeAllErrorQtips = function(){
 			$parent.find(".input-error").qtip("destroy");
+		};
+		
+		this.updateQtipPosition = function(){
+			updateQtipPosition();
 		};
 	
 	
@@ -57,6 +64,34 @@
 			$("form").each(function(){
 				$(this).validate(validateSettings);
 			});
+			
+			$("#datepicker").datepicker({
+				  changeMonth: true,
+				  changeYear: true
+		    });
+		}
+		
+		function updateQtipPosition(){
+			$parent.find(".input-error").qtip("reposition");
+		}
+		
+		function initCheckboxTree(){
+			$checkboxTree = $(".checkbox-tree");
+			
+			if($checkboxTree.length > 0){
+				$checkboxTree.checkboxTree({
+		            initializeChecked: 'expanded',
+		            initializeUnchecked: 'collapsed',
+					collapseEffect : null,
+					expandEffect : null,
+					collapse : function(){
+						updateQtipPosition();
+					},
+					expand : function(){
+						updateQtipPosition();
+					}
+				});
+			}
 		}
 	}
 	
