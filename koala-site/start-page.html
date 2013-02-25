@@ -17,16 +17,38 @@
 </head>
 
 <body id="registration-section">
-<div class="container"> 
-	<!-- the header -->
-	<header>
+
+
+<div id="nav-wrapper">
+	<div class="top-border"></div>
+	<nav id="main-nav" class="centered-content">
 		<div class="image-wrapper">
 			<div class="fadein">
 				<img src="images/sport-man-lrg.gif" />
 				<img src="images/ris-lrg.gif" />
 			</div>
 		</div>
-	</header>
+	</nav>
+</div>
+
+<!-- the header -->
+<header>
+	<img src="images/header-image.jpg" class="page-image" />
+	<div class="centered-content">
+		<h1 class="white-text">
+			<span class="small">Presents</span>
+			Respect in Sport
+		</h1>
+		<div id="sponsor-logos">
+			<img src="images/sport-man-sml.gif" />
+			<img src="images/coaching-man-small.gif" />
+			<img src="images/ris-logo-sml.gif" />
+		</div>
+	</div>
+</header>
+
+	
+<div id="content-wrapper" class="centered-content clearfix narrow-content"> 
 	 
 	<!-- main content of the page -->
 	<div id="main-content">
@@ -34,52 +56,57 @@
 			<p><img src="images/important-icon.gif" />To ensure proper certification, it is important you are accessing the proper site for the client or organization who requested you complete it. If you are not sure if you are at the correct location contact the company or organization who requested you complete this program.</p>
 		</div>
 		<ul class="start-page-options clearfix">
-			<li><a href="#" class="button blarge">Register a New User</a></li>
-			<li class="col-two"><a href="#" class="button blarge">Port a Certificate</a></li>
-			<li><a href="#" class="button blarge">Recertify Now</a></li>
-			<li class="col-two"><a href="#" class="button blarge">Look up a Certification</a></li>
+			<li><a href="#" class="button blarge bblue">Register a New User</a></li>
+			<li class="col-two"><a href="#" class="button blarge bblue">Port a Certificate</a></li>
+			<li><a href="#" class="button blarge bblue">Recertify Now</a></li>
+			<li class="col-two"><a href="#" class="button blarge bblue">Look up a Certification</a></li>
 		</ul>
 	</div>
+	
 	<!-- side content of the page right -->
 	<div id="side-content-right">
-		<div id="logo-menu">
-			<img src="images/sport-man-sml.gif" />
-			<img src="images/coaching-man-small.gif" />
-			<img src="images/ris-logo-sml.gif" />
-		</div>
-		<div id="login-form" class="form-block">
-			<h2>Login</h2>
-			<form action="#" method="post" name="login">
-				<div class="input-holder">
-					<label for="username">Username</label>
-					<input type="text" name="username" required="required" data-error-pos="left"/>
+		<form action="#" method="post" name="login">
+			<div id="login-form" class="form-block">
+				<h3>Login</h3>
+				<div class="form-row">
+					<div class="form-col">
+						<label for="username">Username</label>
+						<input type="text" name="username" required="required" data-error-pos="left"/>
+					</div>
 				</div>
-				<div class="input-holder">
-					<label for="password">Password</label>
-					<input type="password" name="password" required="required" data-error-pos="left"/>
+				<div class="form-row">
+					<div class="form-col">
+						<label for="password">Password</label>
+						<input type="password" name="password" required="required" data-error-pos="left"/>
+					</div>
 				</div>
-				<div class="radio-input-holder">
-					<input type="checkbox" name="remember_username" value="remember_username" />
-					<label>Remember Username</label>
+				<div class="form-row">
+					<div class="radio-form-col">
+						<input type="checkbox" name="remember_username" value="remember_username" />
+						<label>Remember Username</label>
+					</div>
 				</div>
-				<div class="radio-input-holder">
-					<input type="checkbox" name="low_bandwidth" value="low_bandwidth" />
-					<label>Low Bandwidth </label>
+				<div class="form-row">
+					<div class="radio-form-col">
+						<input type="checkbox" name="low_bandwidth" value="low_bandwidth" />
+						<label>Low Bandwidth </label>
+					</div>
 				</div>
-				
 				<div class="form-button-bar">
 					<button type="submit" >Submit</button>
 				</div>
-			</form>
-		</div>
-	</div>	
-	<br class="clearfloat" />	 
-	<!-- footer -->
-	<footer>
-		<p>Respect in Sport is a registered trademark of Respect Group Inc.</p>
-	</footer>
+			</div>
+		</form>
+	</div>
 </div>
 
+
+<!-- footer -->
+<footer>
+	<div class="centered-content">
+		<p>Respect in Sport is a registered trademark of Respect Group Inc.</p>
+	</div>
+</footer>
 
 
 <script src="js/jquery.min.js"></script>

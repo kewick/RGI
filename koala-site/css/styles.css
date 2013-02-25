@@ -78,7 +78,7 @@ button{
 	background-color:#ffffff;
 }
 
-a.button.bbright,
+a.button.bgreen,
 button[type=submit]{
 	color:#ffffff;
 	background-color:#8ac706;
@@ -89,6 +89,17 @@ button[type=submit]{
 .no-touch button[type=submit]:hover{
 	background-color:#adde42;
 }
+
+a.button.bblue{
+	color:#ffffff;
+	background-color:#2eb6e0;
+	border:1px solid #ffffff;
+}
+
+.no-touch a.button.bblue:hover{
+	background-color:#54c3e5;
+}
+
 
 .button.bsmall{
 	
@@ -118,6 +129,10 @@ a.circle-arrow-left{
 
 .bold{
 	font-weight:bold;
+}
+
+.white-text{
+	color:#ffffff !important;
 }
 
 
@@ -244,7 +259,7 @@ form .input-valid:focus{
 	width:280px;
 }
 
-.form-block .form-row .form-col .radio-input-holder{
+.form-block .form-row .form-col .radio-form-col{
 	padding:5px;
 }
 
@@ -281,6 +296,19 @@ form .input-valid:focus{
 #nav-wrapper nav{
 	height:60px;
 	z-index:1;
+}
+
+#nav-wrapper nav h1{
+	color: #ffffff;
+	position: absolute;
+	right: 0;
+	top: 14px;
+	font-size: 40px;
+}
+#nav-wrapper nav h1 .small{
+	display:inline;
+	font-size:24px;
+	margin:0 10px 0 0;
 }
 
 #nav-wrapper nav .image-wrapper {
@@ -367,6 +395,7 @@ header .centered-content h1{
 	text-transform:uppercase;
 	top:70px;
 }
+
 header .centered-content h1 .small{
 	display:block;
 	font-size:24px;
@@ -387,7 +416,7 @@ header .centered-content #sponsor-logos img{
 /* CONTENT
 ------------------------------------------------------------------------------------*/
 #content-wrapper {
-	margin-bottom:25px;
+	margin-bottom:50px;
 	padding:0;
 }
 
@@ -398,9 +427,12 @@ header .centered-content #sponsor-logos img{
 	width: 720px;
 }
 
+#content-wrapper #main-content.narrow-content{
+	width:640px;
+}
+
 #content-wrapper  #main-content .info-box {
-/*	background-color:#dbe6f2; */
-	border: 1px solid #2eb6e0; 
+	background-color:#ffffff; 
 	margin: 0 0 20px 0;
 	padding: 10px;
 }
@@ -418,7 +450,9 @@ header .centered-content #sponsor-logos img{
 	width: 220px;
 }
 
-
+#content-wrapper #side-content-right.narrow-content{
+	width:300px;
+}
 
  
 /* FOOTER
@@ -514,19 +548,11 @@ ul.start-page-options li a.button {
 	width:300px;
 }
 
-
-#login-form {
-	background: #f3f3f3;
-	width: 269px;
+#login-form{
+	width:260px;
 }
-
-#login-form .input-holder label{
-	margin-right:5px;
-	width:80px;
-}
-
-#login-form .input-holder input{
-	width:147px;
+#login-form .form-col input{
+	width:250px;
 }
 
 
