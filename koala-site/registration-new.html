@@ -18,136 +18,193 @@
 
 
 <body id="registration-section">
-<div class="container clearfix"> 
-	<!-- the header -->
-	<header>
+
+<div id="nav-wrapper">
+	<div class="top-border"></div>
+	<nav id="main-nav" class="centered-content">
 		<div class="image-wrapper">
 			<div class="fadein">
 				<img src="images/sport-man-lrg.gif" />
 				<img src="images/ris-lrg.gif" />
 			</div>
 		</div>
-	</header>
-	 
-	<!-- main content of the page -->
-	<div id="main-content">
-		<h2>Program Registration</h2>
-		<div class="form-block">
-			<form action="#" class="register-form" method="post" name="login">
-				<input type="hidden" value="" name="secure-self-question" />
-				<div class="input-holder">
-					<label for="username">Username</label>
-					<input type="text" name="username" required="required" class="showTip"/>
-				</div>
-				<div class="input-holder">
-					<label for="password">Password</label>
-					<input type="password" name="password" required="required" class="showTip"/>
-				</div>
-				<div class="input-holder">
-					<label for="confirmpassword">Confirm Password</label>
-					<input type="password" name="confirmpassword"  required="required"/>
-				</div>
-				<div class="input-holder">
-					<label for="firstname">First Name</label>
-					<input type="text" name="firstname"  required="required"/>
-				</div>
-				<div class="input-holder">
-					<label for="lastname">Last Name</label>
-					<input type="text" name="lastname"  required="required"/>
-				</div>
-				<div class="input-holder">
-					<label for="email">Email</label>
-					<input type="email" name="email"  required="required" class="showTip"/>
-				</div>
-				<div class="input-holder">
-					<label for="gender">Gender</label>
-					<div class="radio-input-holder">
-						<input type="radio" name="gender" value="M"  required="required"> Male
-						<input type="radio" name="gender" value="F"  required="required"> Female
-					</div>
-				</div>
-				<div class="input-holder">
-					<label for="birth-date">Date of Birth</label>
-					<input type="text" name="birthdate" id="datepicker"  required="required"/>
-				</div>
-				<div class="input-holder">
-					<label for="postal-code">Postal Code</label>
-					<input type="text" name="addressPostalCode"  required="required"/>
-				</div>
-				<div class="input-holder">
-					<label for="postal-code">NCCP #</label>
-					<input type="text" name="sm_nccp"  required="required"/>
-				</div>
-				<div class="input-holder">
-					<label for="association">Association</label>
-					<!-- checkbox-tree class is needed to initialize the plugin -->
-					<ul id="association" class="checkbox-tree">
-						<li>
-							<input type="checkbox" name="association" value="1" /><label>Test</label>
-							<ul>
-								<li><input type="checkbox" name="association" value="1-a" /><label>Test</label></li>
-								<li><input type="checkbox" name="association" value="1-b" /><label>Test</label></li>
-							</ul>
-						</li>
-						<li>
-							<input type="checkbox" name="association" value="2" /><label>Test</label>
-							<ul>
-								<li><input type="checkbox" name="association" value="2-a" /><label>Test</label></li>
-								<li><input type="checkbox" name="association" value="2-b" /><label>Test</label></li>
-							</ul>
-						</li>
-					</ul>
-				</div>
-				<div class="input-holder">
-					<label for="security-question">Secure Question</label>
-					<!-- this select is just a dummy. real value from hidden input 'security-question' -->
-					<select name="choose-question">
-						<option value="" selected disabled>Select a question</option>
-						<option value="secure-city">What city were you born in? </option>
-						<option value="secure-school">What high school did you attend? </option>
-						<option value="secure-pet">Name of 1st pet?</option>
-						<option value="secure-car">What was your 1st car?</option>
-						<option value="secure-honeymoon">Where did you go on your honeymoon?</option>
-						<option value="secure-self-enter">Select your own</option>
-					</select>
-				</div>
-				<div class="input-holder" style="display:none;">
-					<label for="custom-question">Custom Security Question</label>
-					<input type="text" name="custom-question" id="custom-question" />
-				</div>
-				<div class="input-holder">
-					<label for="security-choice-answer">Secure Answer</label>
-					<input type="text" name="secure-choice-answer"  required="required"/>
-				</div>
-				<div class="terms-scroll">
-					Privacy Policy will go here in scolling div.
-				</div>
-				<div class="input-holder">
-					<label for="accept-privacy-policy">Privacy Policy Accepted</label>
-					<div class="radio-input-holder">
-						<input type="checkbox" name="policy" value="accepted" required="required">
-					</div>
-				</div>
-				<div class="form-button-bar">
-					<button type="submit">Submit</button>
-				</div>
-			</form>
-		</div>	
-	</div>
-	<!-- side content of the page right -->
-	<div id="side-content-right">
-		<div id="logo-menu">
+	</nav>
+</div>
+
+<!-- the header -->
+<header class="faded">
+	<img src="images/header-image.jpg" class="page-image" />
+	<div class="centered-content">
+		<h1>
+			<span class="small">Presents</span>
+			Respect in Sport
+		</h1>
+		<div id="sponsor-logos">
 			<img src="images/sport-man-sml.gif" />
 			<img src="images/coaching-man-small.gif" />
 			<img src="images/ris-logo-sml.gif" />
 		</div>
-		<a href="#" class="button blarge sidebar-button">Return to Start Page</a>
 	</div>
-	<!-- footer -->
-	<footer>
-			<p>Respect in Sport is a registered trademark of Respect Group Inc.</p>
-	</footer>
+</header>
+	
+<div id="content-wrapper" class="centered-content clearfix"> 
+	<!-- main content of the page -->
+	<div id="main-content">
+		<h2>Program Registration</h2>
+		
+		<form action="#" class="register-form" method="post" name="login">
+			<input type="hidden" value="" name="secure-self-question" />
+			
+			<div class="form-block">
+				<h3>Basic Information</h3>
+				<div class="form-row">
+					<div class="form-col">
+						<label for="firstname">First Name</label>
+						<input type="text" name="firstname"  required="required"/>
+					</div>
+					<div class="form-col">
+						<label for="lastname">Last Name</label>
+						<input type="text" name="lastname"  required="required"/>
+					</div>
+				</div>
+				<div class="form-row">
+					<div class="form-col">
+						<label for="email">Email</label>
+						<input type="email" name="email"  required="required" class="showTip"/>
+					</div>
+				</div>
+			</div>
+			
+			<div class="form-block">
+				<h3>Profile Information</h3>
+				<div class="form-row">
+					<div class="form-col">
+						<label for="birth-date">Date of Birth</label>
+						<input type="text" name="birthdate" id="datepicker"  required="required"/>
+					</div>
+					<div class="form-col">
+						<label for="gender">Gender</label>
+						<div class="radio-form-col">
+							<input type="radio" name="gender" value="M"  required="required"> Male &nbsp;
+							<input type="radio" name="gender" value="F"  required="required"> Female
+						</div>
+					</div>
+				</div>
+				<div class="form-row">
+					<div class="form-col">
+						<label for="postal-code">Postal Code</label>
+						<input type="text" name="addressPostalCode"  required="required"/>
+					</div>
+					<div class="form-col">
+						<label for="postal-code">NCCP #</label>
+						<input type="text" name="sm_nccp"  required="required"/>
+					</div>
+				</div>
+				<div class="form-row">
+					<div class="form-col">
+						<label for="association">Association</label>
+						<!-- checkbox-tree class is needed to initialize the plugin -->
+						<ul id="association" class="checkbox-tree">
+							<li>
+								<input type="checkbox" name="association" value="1" /><label>Test</label>
+								<ul>
+									<li><input type="checkbox" name="association" value="1-a" /><label>Test</label></li>
+									<li><input type="checkbox" name="association" value="1-b" /><label>Test</label></li>
+								</ul>
+							</li>
+							<li>
+								<input type="checkbox" name="association" value="2" /><label>Test</label>
+								<ul>
+									<li><input type="checkbox" name="association" value="2-a" /><label>Test</label></li>
+									<li><input type="checkbox" name="association" value="2-b" /><label>Test</label></li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			
+			<div class="form-block">
+				<h3>Account Information</h3>
+				<div class="form-row">
+					<div class="form-col">
+						<label for="username">Username</label>
+						<input type="text" name="username" required="required" class="showTip"/>
+					</div>
+				</div>
+				<div class="form-row">
+					<div class="form-col">
+						<label for="password">Password</label>
+						<input type="password" name="password" required="required" class="showTip"/>
+					</div>
+					<div class="form-col">
+						<label for="confirmpassword">Confirm Password</label>
+						<input type="password" name="confirmpassword"  required="required"/>
+					</div>
+				</div>
+				<div class="form-row">
+					<div class="form-col">
+						<label for="security-question">Secure Question</label>
+						<!-- this select is just a dummy. real value from hidden input 'security-question' -->
+						<select name="choose-question">
+							<option value="" selected disabled>Select a question</option>
+							<option value="secure-city">What city were you born in? </option>
+							<option value="secure-school">What high school did you attend? </option>
+							<option value="secure-pet">Name of 1st pet?</option>
+							<option value="secure-car">What was your 1st car?</option>
+							<option value="secure-honeymoon">Where did you go on your honeymoon?</option>
+							<option value="secure-self-enter">Select your own</option>
+						</select>
+					</div>
+					<div class="form-col" style="display:none;">
+						<label for="custom-question">Custom Security Question</label>
+						<input type="text" name="custom-question" id="custom-question" />
+					</div>
+				</div>
+				<div class="form-row">
+					<div class="form-col">
+						<label for="security-choice-answer">Secure Answer</label>
+						<input type="text" name="secure-choice-answer"  required="required"/>
+					</div>
+				</div>
+			</div>
+			
+			<div class="form-block">
+				<div class="privacy-policy-box">
+					<h3>Privacy Policy</h3>
+					<p>orem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.</p>
+					<p>orem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.</p>
+					<p>orem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.</p>
+					<p>orem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.</p>
+				</div>
+				
+				<div class="form-col">
+					<div class="radio-container">
+						<input type="checkbox" name="policy" value="accepted" required="required">
+						<label for="accept-privacy-policy" class="bold">I Accept the terms</label>
+					</div>
+				</div>
+			</div>
+			
+			<div class="form-button-bar">
+				<button type="submit">Submit</button>
+			</div>		
+		</form>
+	</div>
+	
+	<!-- side content of the page right -->
+	<div id="side-content-right">
+		<a href="#" class="circle-arrow-left">Return to Start Page</a>
+	</div>
+	
 </div>
+
+<!-- footer -->
+<footer>
+	<div class="centered-content">
+		<p>Respect in Sport is a registered trademark of Respect Group Inc.</p>
+	</div>
+</footer>
 
 
 <script src="js/jquery.min.js"></script>
