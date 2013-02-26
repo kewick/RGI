@@ -1,0 +1,160 @@
+/**
+* RIS Specific
+ * @colours : light blue = #2eb6e0
+ *            Dark blue = #0777a5
+ *            Green = #8ac706
+ *
+ */
+ 
+ /* CORE
+------------------------------------------------------------------------------------*/
+body {
+	color: #363636;
+	background-color:#f1fcff;
+}
+
+/* GLOBAL FORMATTING
+------------------------------------------------------------------------------------*/
+
+a{
+	color:#dc5000;
+}
+
+h1, h2, h3, h4{
+	color:#363636;
+}
+
+a.button,
+button{
+	color:#363636;
+	background-color:#e6e6e6;
+	border:1px solid #cccccc;
+}
+
+.no-touch a.button:hover,
+.no-touch button:hover{
+	background-color:#ffffff;
+}
+
+a.button.bgreen,
+button[type=submit]{
+	color:#ffffff;
+	background-color:#8ac706;
+	border:1px solid #ffffff;
+}
+
+.no-touch a.button.bbright:hover,
+.no-touch button[type=submit]:hover{
+	background-color:#adde42;
+}
+
+a.button.bblue{
+	color:#ffffff;
+	background-color:#2eb6e0;
+	border:1px solid #ffffff;
+}
+
+.no-touch a.button.bblue:hover{
+	background-color:#54c3e5;
+}
+
+a.circle-arrow-left{
+	background:transparent url("../images/circle-arrow-left.png") no-repeat left top;
+	color:#2eb6e0;
+}
+
+/* FORM
+-----------------------*/
+input[type=text],
+input[type=email],
+input[type=password],
+input[type=number],
+textarea,
+select{
+	background-color:#fff;
+	border:1px solid #cccccc;
+}
+
+input[type=text]:focus,
+input[type=email]:focus,
+input[type=password]:focus,
+input[type=number]:focus,
+textarea:focus,
+select:focus{
+	background-color:#d5e5ee;
+	border:1px solid #00609c;
+	outline:1px solid #fff;
+}
+
+form .input-error{
+	background-color:#ffd9d9;
+	border:1px solid #8a1515;
+}
+
+form .input-error:focus{
+	background-color:#fdabab;
+	border:1px solid #8a1515;
+}
+
+form .input-valid{
+	background-color:#e7fae3;
+	border:1px solid #2e6f0b;
+}
+
+form .input-valid:focus{
+	background-color:#c6f1be;
+	border:1px solid #2e6f0b;
+}
+
+.form-block {
+	background-color:#ffffff;
+}
+
+.privacy-policy-box{
+	background:#ffffff;
+}
+
+/* NAV
+------------------------------------------------------------------------------------*/
+#nav-wrapper{
+	background-color:#2eb6e0;
+}
+
+#nav-wrapper .top-border{
+	background-color:#0777a5;
+}
+
+
+#nav-wrapper nav h1{
+	color: #ffffff;
+}
+
+#nav-wrapper nav .image-wrapper {
+	background:transparent url("../images/banner-bg.png") no-repeat left top;
+}
+
+/* HEADER
+------------------------------------------------------------------------------------*/
+header {
+	background-color:#ffffff;
+}
+
+header .centered-content h1{
+	color:#0777a5;
+}
+
+/* CONTENT
+------------------------------------------------------------------------------------*/
+
+#content-wrapper  #main-content .info-box {
+	background-color:#ffffff; 
+}
+
+/* SIDE BAR RIGHT
+------------------------------------------------------------------------------------*/
+
+/* FOOTER
+------------------------------------------------------------------------------------*/
+footer {
+	background-color:#ffffff;
+}

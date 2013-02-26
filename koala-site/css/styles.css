@@ -1,15 +1,11 @@
 /**
- * @colours : light blue = #2eb6e0
- *            Dark blue = #0777a5
- *            Green = #8ac706
- *
+ *  Base CSS 
+ *          
  */
 
 /* CORE
 ------------------------------------------------------------------------------------*/
 body {
-	color: #363636;
-	background-color:#f1fcff;
 	font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
 	font-size:13px;
 }
@@ -25,9 +21,6 @@ body {
 p{
 	line-height:1.5em;
 }
-a{
-	color:#dc5000;
-}
 
 .no-touch a:hover{
 	text-decoration:none;
@@ -38,7 +31,6 @@ a:focus{
 }
 
 h1, h2, h3, h4{
-	color:#363636;
 	font-family: "Myriad Pro", Myriad, "Liberation Sans", "Nimbus Sans L", "Helvetica Neue", Helvetica, Arial, sans-serif;
 	font-weight: normal;
 	margin-top:0;
@@ -59,9 +51,6 @@ h3 {
 
 a.button,
 button{
-	color:#363636;
-	background-color:#e6e6e6;
-	border:1px solid #cccccc;
 	font-family: "Myriad Pro", Myriad, Arial;
 	font-size:18px;
 	display: inline-block;
@@ -73,34 +62,6 @@ button{
 	zoom:1;
 }
 
-.no-touch a.button:hover,
-.no-touch button:hover{
-	background-color:#ffffff;
-}
-
-a.button.bgreen,
-button[type=submit]{
-	color:#ffffff;
-	background-color:#8ac706;
-	border:1px solid #ffffff;
-}
-
-.no-touch a.button.bbright:hover,
-.no-touch button[type=submit]:hover{
-	background-color:#adde42;
-}
-
-a.button.bblue{
-	color:#ffffff;
-	background-color:#2eb6e0;
-	border:1px solid #ffffff;
-}
-
-.no-touch a.button.bblue:hover{
-	background-color:#54c3e5;
-}
-
-
 .button.bsmall{
 	
 }
@@ -111,8 +72,6 @@ a.button.bblue{
 }
 
 a.circle-arrow-left{
-	background:transparent url("../images/circle-arrow-left.png") no-repeat left top;
-	color:#2eb6e0;
 	display:inline-block;
 	font-size:15px;
 	height:32px;
@@ -152,44 +111,10 @@ input[type=password],
 input[type=number],
 textarea,
 select{
-	background-color:#fff;
-	border:1px solid #cccccc;
 	padding:5px;
 }
 
-input[type=text]:focus,
-input[type=email]:focus,
-input[type=password]:focus,
-input[type=number]:focus,
-textarea:focus,
-select:focus{
-	background-color:#d5e5ee;
-	border:1px solid #00609c;
-	outline:1px solid #fff;
-}
-
-form .input-error{
-	background-color:#ffd9d9;
-	border:1px solid #8a1515;
-}
-
-form .input-error:focus{
-	background-color:#fdabab;
-	border:1px solid #8a1515;
-}
-
-form .input-valid{
-	background-color:#e7fae3;
-	border:1px solid #2e6f0b;
-}
-
-form .input-valid:focus{
-	background-color:#c6f1be;
-	border:1px solid #2e6f0b;
-}
-
 .form-block {
-	background-color:#ffffff;
 	margin:0 0 20px 0;
 	padding: 20px;
 	position:relative;
@@ -268,7 +193,6 @@ form .input-valid:focus{
 }
 
 .privacy-policy-box{
-	background:#ffffff;
 	height:250px;
 	margin-bottom:20px;
 	overflow:auto;
@@ -278,14 +202,12 @@ form .input-valid:focus{
 /* NAV
 ------------------------------------------------------------------------------------*/
 #nav-wrapper{
-	background-color:#2eb6e0;
 	height:60px;
 	position:relative;
 	width:100%;
 }
 
 #nav-wrapper .top-border{
-	background-color:#0777a5;
 	height:12px;
 	left:0;
 	position:absolute;
@@ -299,7 +221,6 @@ form .input-valid:focus{
 }
 
 #nav-wrapper nav h1{
-	color: #ffffff;
 	position: absolute;
 	right: 0;
 	top: 14px;
@@ -312,7 +233,6 @@ form .input-valid:focus{
 }
 
 #nav-wrapper nav .image-wrapper {
-	background:transparent url("../images/banner-bg.png") no-repeat left top;
 	height: 125px;
 	left:0;
 	position: absolute; 
@@ -363,7 +283,6 @@ form .input-valid:focus{
 /* HEADER
 ------------------------------------------------------------------------------------*/
 header {
-	background-color:#ffffff;
 	height: 186px;	
 	margin: 0 0 25px 0;
 	overflow:hidden;
@@ -389,7 +308,6 @@ header .centered-content{
 }
 
 header .centered-content h1{
-	color:#0777a5;
 	left:0;
 	position:absolute;
 	text-transform:uppercase;
@@ -431,8 +349,7 @@ header .centered-content #sponsor-logos img{
 	width:640px;
 }
 
-#content-wrapper  #main-content .info-box {
-	background-color:#ffffff; 
+#content-wrapper  #main-content .info-box { 
 	margin: 0 0 20px 0;
 	padding: 10px;
 }
@@ -458,7 +375,6 @@ header .centered-content #sponsor-logos img{
 /* FOOTER
 ------------------------------------------------------------------------------------*/
 footer {
-	background-color:#ffffff;
 	clear:both;
 	width: 100%;
 }
@@ -470,8 +386,6 @@ footer .centered-content{
 footer .centered-content p{
 	text-align: right;
 }
-
-
 
 
 /* UTILS
