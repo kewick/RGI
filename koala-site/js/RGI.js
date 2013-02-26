@@ -186,4 +186,5 @@
 		return this.optional(element) || check;
 	}, "Please enter a correct date");
 	
+	
 })(jQuery);

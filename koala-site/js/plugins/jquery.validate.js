@@ -543,8 +543,13 @@ $.extend($.validator, {
 			for (var method in rules ) {
 				var rule = { method: method, parameters: rules[method] };
 				try {
-
-					result = $.validator.methods[method].call( this, val, element, rule.parameters );
+					
+					/**
+					 * Added by arjayaquino... make sure it's a method before calling
+					 */
+					if(typeof $.validator.methods[method] == "function"){
+						result = $.validator.methods[method].call( this, val, element, rule.parameters );
+					}
 
 					// if a method indicates that the field is optional and therefore valid,
 					// don't mark it as valid when there are no other rules

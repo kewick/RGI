@@ -5,12 +5,15 @@
 	<title>Respect Group New Registration</title>
 	
 	<link rel="stylesheet" href="css/normalize.css" type="text/css" media="screen" />
-	<link rel="stylesheet" href="css/jquery-ui-1.10.1.custom.min.css" type="text/css" media="screen" />
+	<link rel="stylesheet" href="css/jquery-ui-1.10.1.custom.css" type="text/css" media="screen" />
 	<link rel="stylesheet" href="js/plugins/qtip/jquery.qtip.min.css" type="text/css" media="screen" />
 	<link rel="stylesheet" href="js/plugins/checkboxtree/jquery.checkboxtree.css" type="text/css" media="screen" />
 	
 	<link rel="stylesheet" href="css/styles.css" type="text/css" media="screen" />
 	<link rel="stylesheet" href="css/ris.css" type="text/css" media="screen" />
+	
+	<script src="js/jquery.min.js"></script>
+	<script src="js/plugins/jquery.validate.js"></script>
 	
 	<script src="js/modernizr.custom.min.js"></script>
 	
@@ -91,13 +94,18 @@
 				<div class="form-row">
 					<div class="form-col">
 						<label for="postal-code">Postal Code</label>
-						<input type="text" name="addressPostalCode"  required="required"/>
+						<input type="text" name="addressPostalCode" class="custom-field" data-customConditions="postalCode" data-customConditionVals="true" data-requiredMessage="Please enter a postal code" required="required"/>
+						<script>
+							jQuery.validator.addMethod("postalCode", function(value) {
+							     return value.match(/^[a-zA-Z][0-9][a-zA-Z](-| )?[0-9][a-zA-Z][0-9]$/);
+							}, 'Please enter a valid postal code');
+						</script>
 					</div>
 				</div>
 				<div class="form-row">
 					<div class="form-col">
 						<label for="postal-code">NCCP #</label>
-						<input type="text" name="sm_nccp"  required="required"/>
+						<input type="text" name="sm_nccp" class="custom-field" data-customConditions="minlength,maxlength,number" data-customConditionVals="3,10,true" data-requiredMessage="Please enter a NCCP #" required="required"/>
 					</div>
 				</div>
 				<div class="form-row">
@@ -209,10 +217,8 @@
 </footer>
 
 
-<script src="js/jquery.min.js"></script>
 <script src="js/jquery-ui-1.10.1.custom.min.js"></script>
 <script src="js/plugins/jquery.shuffle.js"></script>
-<script src="js/plugins/jquery.validate.js"></script>
 <script src="js/plugins/qtip/jquery.qtip.min.js"></script>
 <script src="js/plugins/checkboxtree/jquery.checkboxtree.js"></script>
 

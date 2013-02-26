@@ -65,6 +65,8 @@
 				$(this).validate(validateSettings);
 			});
 			
+			initCustomFields();
+			
 			var $datePicker = $(".datepicker");
 			if($datePicker.length > 0){
 				$datePicker.datepicker({
@@ -72,6 +74,35 @@
 					 changeYear: true
 			    });	
 			}
+		}
+		
+		/**
+		 * dynamically adds validate options
+		 */
+		function initCustomFields(){
+			$parent.find(".custom-field").each(function(){
+				var $target = $(this);
+				var fieldName = $target.attr("name");
+				var customConditions = $target.data("customconditions").toString();
+				var customConditionVals = $target.data("customconditionvals").toString();
+				var requiredMessage = $target.data("requiredmessage");
+				
+				var options = {};
+				if(customConditions != null){
+					customConditions = customConditions.split(",");
+					customConditionVals = customConditionVals.split(",");
+					for(var i=0; i<customConditions.length; i++){
+						options[customConditions[i]] =  customConditionVals[i];
+					}
+				}
+				if(requiredMessage != null && requiredMessage != ""){
+					options.messages = {
+						"required" : requiredMessage
+					}
+				}
+				
+				$target.rules("add", options);
+			});
 		}
 		
 		function updateQtipPosition(){
