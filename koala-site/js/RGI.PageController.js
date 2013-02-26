@@ -65,10 +65,13 @@
 				$(this).validate(validateSettings);
 			});
 			
-			$("#datepicker").datepicker({
-				  changeMonth: true,
-				  changeYear: true
-		    });
+			var $datePicker = $(".datepicker");
+			if($datePicker.length > 0){
+				$datePicker.datepicker({
+					 changeMonth: true,
+					 changeYear: true
+			    });	
+			}
 		}
 		
 		function updateQtipPosition(){
@@ -79,19 +82,23 @@
 			$checkboxTree = $(".checkbox-tree");
 			
 			if($checkboxTree.length > 0){
-				$checkboxTree.checkboxTree({
-		            initializeChecked: 'expanded',
-		            initializeUnchecked: 'collapsed',
-					collapseEffect : null,
-					expandEffect : null,
-					collapse : function(){
-						updateQtipPosition();
-					},
-					expand : function(){
-						updateQtipPosition();
-					}
-				});
-			}
+			   	$checkboxTree.checkboxTree({
+                   initializeChecked: 'expanded',
+                   initializeUnchecked: 'collapsed',
+                   collapseEffect : null,
+                   expandEffect : null,
+                   collapse : function(){
+                       updateQtipPosition();
+                   },
+                   expand : function(){
+                       updateQtipPosition();
+                   },
+                   checkParents : false,
+                   checkChildren : false,
+                   uncheckChildren : false,
+                   initialState : 'collapse'
+               });
+           }
 		}
 	}
 	

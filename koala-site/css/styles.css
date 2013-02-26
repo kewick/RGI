@@ -6,6 +6,8 @@
 /* CORE
 ------------------------------------------------------------------------------------*/
 body {
+	color: #363636;
+	background-color:#f6f6f6;
 	font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
 	font-size:13px;
 }
@@ -20,6 +22,10 @@ body {
 ------------------------------------------------------------------------------------*/
 p{
 	line-height:1.5em;
+}
+
+a{
+	color:#dc5000;
 }
 
 .no-touch a:hover{
@@ -51,6 +57,9 @@ h3 {
 
 a.button,
 button{
+	color:#363636;
+	background-color:#e6e6e6;
+	border:1px solid #cccccc;
 	font-family: "Myriad Pro", Myriad, Arial;
 	font-size:18px;
 	display: inline-block;
@@ -60,6 +69,11 @@ button{
 	text-decoration: none;
 	*display:inline;
 	zoom:1;
+}
+
+.no-touch a.button:hover,
+.no-touch button:hover{
+	background-color:#ffffff;
 }
 
 .button.bsmall{
@@ -100,6 +114,10 @@ a.circle-arrow-left{
 .ui-widget{
 	font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
 	font-size:1em;
+}
+
+.ui-datepicker{
+	z-index:99999 !important;
 }
 
 
@@ -345,7 +363,7 @@ header .centered-content #sponsor-logos img{
 	width: 720px;
 }
 
-#content-wrapper #main-content.narrow-content{
+#content-wrapper.narrow-content #main-content{
 	width:640px;
 }
 

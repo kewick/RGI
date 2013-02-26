@@ -56,7 +56,7 @@
 			<input type="hidden" value="" name="secure-self-question" />
 			
 			<div class="form-block">
-				<h3>Basic Information</h3>
+				<h3>Profile Information</h3>
 				<div class="form-row">
 					<div class="form-col">
 						<label for="firstname">First Name</label>
@@ -72,16 +72,14 @@
 						<label for="email">Email</label>
 						<input type="email" name="email"  required="required" class="showTip"/>
 					</div>
-				</div>
-			</div>
-			
-			<div class="form-block">
-				<h3>Profile Information</h3>
+				</div>				
 				<div class="form-row">
 					<div class="form-col">
-						<label for="birth-date">Date of Birth</label>
-						<input type="text" name="birthdate" id="datepicker"  required="required"/>
+						<label for="birthdate">Date of Birth</label>
+						<input type="text" name="birthdate" class="datepicker"  required="required"/>
 					</div>
+				</div>
+				<div class="form-row">
 					<div class="form-col">
 						<label for="gender">Gender</label>
 						<div class="radio-form-col">
@@ -95,6 +93,8 @@
 						<label for="postal-code">Postal Code</label>
 						<input type="text" name="addressPostalCode"  required="required"/>
 					</div>
+				</div>
+				<div class="form-row">
 					<div class="form-col">
 						<label for="postal-code">NCCP #</label>
 						<input type="text" name="sm_nccp"  required="required"/>
