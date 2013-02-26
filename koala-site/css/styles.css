@@ -76,6 +76,18 @@ button{
 	background-color:#ffffff;
 }
 
+a.button.baction,
+button[type=submit]{
+	color:#ffffff;
+	background-color:#8ac706;
+	border:1px solid #ffffff;
+}
+
+.no-touch a.button.baction:hover,
+.no-touch button[type=submit]:hover{
+	background-color:#adde42;
+}
+
 .button.bsmall{
 	
 }

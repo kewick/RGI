@@ -23,14 +23,18 @@ h1, h2, h3, h4{
 	color:#363636;
 }
 
-a.button.bgreen,
+a.button,
+button{
+}
+
+a.button.baction,
 button[type=submit]{
 	color:#ffffff;
 	background-color:#8ac706;
 	border:1px solid #ffffff;
 }
 
-.no-touch a.button.bbright:hover,
+.no-touch a.button.baction:hover,
 .no-touch button[type=submit]:hover{
 	background-color:#adde42;
 }
@@ -49,6 +53,7 @@ a.circle-arrow-left{
 	background:transparent url("../images/circle-arrow-left.png") no-repeat left top;
 	color:#2eb6e0;
 }
+
 
 /* FORM
 -----------------------*/
