@@ -42,11 +42,6 @@
 			<span class="small">Presents</span>
 			Respect in Sport
 		</h1>
-		<div id="sponsor-logos">
-			<img src="images/sport-man-sml.gif" />
-			<img src="images/coaching-man-small.gif" />
-			<img src="images/ris-logo-sml.gif" />
-		</div>
 	</div>
 </header>
 
@@ -61,119 +56,97 @@
 			<div class="form-block">
 				<h3>Profile Information</h3>
 				<div class="form-row">
-					<div class="form-col">
-						<label for="firstname">First Name</label>
-						<input type="text" name="firstname"  required="required"/>
-					</div>
-					<div class="form-col">
-						<label for="lastname">Last Name</label>
-						<input type="text" name="lastname"  required="required"/>
-					</div>
+					<label for="firstname">First Name</label>
+					<input type="text" name="firstname"  required="required"/>
 				</div>
 				<div class="form-row">
-					<div class="form-col">
-						<label for="email">Email</label>
-						<input type="email" name="email"  required="required" class="showTip"/>
-					</div>
+					<label for="lastname">Last Name</label>
+					<input type="text" name="lastname"  required="required"/>
+				</div>
+				<div class="form-row">
+					<label for="email">Email</label>
+					<input type="email" name="email"  required="required" class="showTip"/>
 				</div>				
 				<div class="form-row">
-					<div class="form-col">
-						<label for="birthdate">Date of Birth</label>
-						<input type="text" name="birthdate" class="datepicker"  required="required"/>
+					<label for="birthdate">Date of Birth</label>
+					<input type="text" name="birthdate" class="datepicker"  required="required"/>
+				</div>
+				<div class="form-row">
+					<label for="gender">Gender</label>
+					<div class="radio-form-col">
+						<input type="radio" name="gender" value="M"  required="required"> Male &nbsp;
+						<input type="radio" name="gender" value="F"  required="required"> Female
 					</div>
 				</div>
 				<div class="form-row">
-					<div class="form-col">
-						<label for="gender">Gender</label>
-						<div class="radio-form-col">
-							<input type="radio" name="gender" value="M"  required="required"> Male &nbsp;
-							<input type="radio" name="gender" value="F"  required="required"> Female
-						</div>
-					</div>
+					<label for="postal-code">Postal Code</label>
+					<input type="text" name="addressPostalCode" class="custom-field" data-customConditions="postalCode" data-customConditionVals="true" data-requiredMessage="Please enter a postal code" required="required"/>
+					<script>
+						jQuery.validator.addMethod("postalCode", function(value) {
+						     return value.match(/^[a-zA-Z][0-9][a-zA-Z](-| )?[0-9][a-zA-Z][0-9]$/);
+						}, 'Please enter a valid postal code');
+					</script>
 				</div>
 				<div class="form-row">
-					<div class="form-col">
-						<label for="postal-code">Postal Code</label>
-						<input type="text" name="addressPostalCode" class="custom-field" data-customConditions="postalCode" data-customConditionVals="true" data-requiredMessage="Please enter a postal code" required="required"/>
-						<script>
-							jQuery.validator.addMethod("postalCode", function(value) {
-							     return value.match(/^[a-zA-Z][0-9][a-zA-Z](-| )?[0-9][a-zA-Z][0-9]$/);
-							}, 'Please enter a valid postal code');
-						</script>
-					</div>
+					<label for="postal-code">NCCP #</label>
+					<input type="text" name="sm_nccp" class="custom-field" data-customConditions="minlength,maxlength,number" data-customConditionVals="3,10,true" data-requiredMessage="Please enter a NCCP #" required="required"/>
 				</div>
 				<div class="form-row">
-					<div class="form-col">
-						<label for="postal-code">NCCP #</label>
-						<input type="text" name="sm_nccp" class="custom-field" data-customConditions="minlength,maxlength,number" data-customConditionVals="3,10,true" data-requiredMessage="Please enter a NCCP #" required="required"/>
-					</div>
-				</div>
-				<div class="form-row">
-					<div class="form-col">
-						<label for="association">Association</label>
-						<!-- checkbox-tree class is needed to initialize the plugin -->
-						<ul id="association" class="checkbox-tree">
-							<li>
-								<input type="checkbox" name="association" value="1" /><label>Test</label>
-								<ul>
-									<li><input type="checkbox" name="association" value="1-a" /><label>Test</label></li>
-									<li><input type="checkbox" name="association" value="1-b" /><label>Test</label></li>
-								</ul>
-							</li>
-							<li>
-								<input type="checkbox" name="association" value="2" /><label>Test</label>
-								<ul>
-									<li><input type="checkbox" name="association" value="2-a" /><label>Test</label></li>
-									<li><input type="checkbox" name="association" value="2-b" /><label>Test</label></li>
-								</ul>
-							</li>
-						</ul>
-					</div>
+					<label for="association">Association</label>
+					<!-- checkbox-tree class is needed to initialize the plugin -->
+					<ul id="association" class="checkbox-tree">
+						<li>
+							<input type="checkbox" name="association" value="1" /><label>Test</label>
+							<ul>
+								<li><input type="checkbox" name="association" value="1-a" /><label>Test</label></li>
+								<li><input type="checkbox" name="association" value="1-b" /><label>Test</label></li>
+							</ul>
+						</li>
+						<li>
+							<input type="checkbox" name="association" value="2" /><label>Test</label>
+							<ul>
+								<li><input type="checkbox" name="association" value="2-a" /><label>Test</label></li>
+								<li><input type="checkbox" name="association" value="2-b" /><label>Test</label></li>
+							</ul>
+						</li>
+					</ul>
 				</div>
 			</div>
 			
 			<div class="form-block">
 				<h3>Account Information</h3>
 				<div class="form-row">
-					<div class="form-col">
-						<label for="username">Username</label>
-						<input type="text" name="username" required="required" class="showTip"/>
-					</div>
+					<label for="username">Username</label>
+					<input type="text" name="username" required="required" class="showTip"/>
 				</div>
 				<div class="form-row">
-					<div class="form-col">
-						<label for="password">Password</label>
-						<input type="password" name="password" required="required" class="showTip"/>
-					</div>
-					<div class="form-col">
-						<label for="confirmpassword">Confirm Password</label>
-						<input type="password" name="confirmpassword"  required="required"/>
-					</div>
+					<label for="password">Password</label>
+					<input type="password" name="password" required="required" class="showTip"/>
 				</div>
 				<div class="form-row">
-					<div class="form-col">
-						<label for="security-question">Secure Question</label>
-						<!-- this select is just a dummy. real value from hidden input 'security-question' -->
-						<select name="choose-question">
-							<option value="" selected disabled>Select a question</option>
-							<option value="secure-city">What city were you born in? </option>
-							<option value="secure-school">What high school did you attend? </option>
-							<option value="secure-pet">Name of 1st pet?</option>
-							<option value="secure-car">What was your 1st car?</option>
-							<option value="secure-honeymoon">Where did you go on your honeymoon?</option>
-							<option value="secure-self-enter">Select your own</option>
-						</select>
-					</div>
-					<div class="form-col" style="display:none;">
-						<label for="custom-question">Custom Security Question</label>
-						<input type="text" name="custom-question" id="custom-question" />
-					</div>
+					<label for="confirmpassword">Confirm Password</label>
+					<input type="password" name="confirmpassword"  required="required"/>
 				</div>
 				<div class="form-row">
-					<div class="form-col">
-						<label for="security-choice-answer">Secure Answer</label>
-						<input type="text" name="secure-choice-answer"  required="required"/>
-					</div>
+					<label for="security-question">Secure Question</label>
+					<!-- this select is just a dummy. real value from hidden input 'security-question' -->
+					<select name="choose-question">
+						<option value="" selected disabled>Select a question</option>
+						<option value="secure-city">What city were you born in? </option>
+						<option value="secure-school">What high school did you attend? </option>
+						<option value="secure-pet">Name of 1st pet?</option>
+						<option value="secure-car">What was your 1st car?</option>
+						<option value="secure-honeymoon">Where did you go on your honeymoon?</option>
+						<option value="secure-self-enter">Select your own</option>
+					</select>
+				</div>
+				<div class="form-row" style="display:none;">
+					<label for="custom-question">Custom Security Question</label>
+					<input type="text" name="custom-question" id="custom-question" />
+				</div>
+				<div class="form-row">
+					<label for="security-choice-answer">Secure Answer</label>
+					<input type="text" name="secure-choice-answer"  required="required"/>
 				</div>
 			</div>
 			
@@ -187,11 +160,21 @@
 				</div>
 				
 				<div class="form-row">
-					<div class="form-col">
-						<div class="radio-container">
-							<input type="checkbox" name="policy" value="accepted" required="required">
-							<label for="accept-privacy-policy" class="bold">I Accept the terms</label>
-						</div>
+					<div class="radio-container">
+						<input type="checkbox" name="policy" value="accepted" required="required">
+						<label for="accept-privacy-policy" class="bold">I Accept the terms</label>
+					</div>
+				</div>
+			</div>
+			
+			<div class="form-block">
+				<p>Respect Group will communicate with you only for the purposes of program completion.  Examples include acknowledgement of program completion, recertification due notifications and responses to helpdesk enquiries</p>
+				<p>The organization requesting you complete this program may communicate with you via the email address you have entered here.  We can advise the organization of your desire to opt out of these communications if you select Opt Out.</p>
+				
+				<div class="form-row">
+					<div class="radio-container">
+						<input type="checkbox" name="opt-out-communication" />
+						<label for="opt-out-communication" class="bold">I wish to opt out</label>
 					</div>
 				</div>
 			</div>
@@ -204,6 +187,11 @@
 	
 	<!-- side content of the page right -->
 	<div id="side-content-right">
+		<div id="sponsor-logos">
+			<img src="images/sport-man-sml.gif" />
+			<img src="images/coaching-man-small.gif" />
+			<img src="images/ris-logo-sml.gif" />
+		</div>
 		<a href="#" class="circle-arrow-left">Return to Start Page</a>
 	</div>
 	

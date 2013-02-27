@@ -14,22 +14,38 @@
 
 </head>
 <body id="registration-section">
-<div class="container"> 
-	<!-- the header -->
-	<header>
+	
+<div id="nav-wrapper">
+	<div class="top-border"></div>
+	<nav id="main-nav" class="centered-content">
 		<div class="image-wrapper">
 			<div class="fadein">
 				<img src="images/sport-man-lrg.gif" />
 				<img src="images/ris-lrg.gif" />
 			</div>
 		</div>
-	</header>
-	 
+	</nav>
+</div>
+
+<!-- the header -->
+<header class="faded">
+	<img src="images/header-image.jpg" class="page-image" />
+	<div class="centered-content">
+		<h1>
+			<span class="small">Presents</span>
+			Respect in Sport
+		</h1>
+	</div>
+</header>
+
+
+<div id="content-wrapper" class="centered-content clearfix">
+	
 	<!-- main content of the page -->
 	<div id="main-content">
 		<h2>Registration</h2>
 		<div class="form-block with-step">
-			<div class="step">1</div>
+			<h3 class="step">1</h3>
 			<h3>Have you registered for any of the following programs previously?</h3>
 			<ul>
 				<li>Respect in Sport</li>
@@ -42,29 +58,32 @@
 		</div>
 		
 		<div class="form-block with-step">
-			<div class="step">2</div>
+			<h3 class="step">2</h3>
 			<h3>If No, Click Continue</h3>
-			<a href="#" class="button blarge next-button">Continue</a>
+			<a href="#" class="button blarge bbright next-button">Continue</a>
 		</div>
 		
 		<div class="form-block with-step">
-			<div class="step">3</div>
+			<h3 class="step">3</h3>
 			<h3>If Yes, let's start registration by accessing your existing profile.</h3>
 			<p>You may access your profile by any of the two ways listed below.</p>
-			<div class="form-button-bar">
-				<a href="#" id="button-user-password" class="button blarge">Username &amp; Password</a>
-				<a href="#" id="button-first-last" class="button blarge">First and Last Name</a>
+			<div class="form-button-bar center-text">
+				<a href="#" id="button-user-password" class="button blarge bbright">Username &amp; Password</a>
+				<a href="#" id="button-first-last" class="button blarge bbright">First and Last Name</a>
+				<a href="#" id="button-first-last" class="button blarge bbright">Certificate Lookup</a>
 			</div>
 			<div class="registration-options">
 				<div id="register-user-password">
 					<form action="#" class="register-form" method="post" name="login">
-						<div class="form-col">
-							<label for="username">Username</label>
-							<input type="text" name="username" required="required"/>
-						</div>
-						<div class="form-col">
-							<label for="password">Password</label>
-							<input type="password" name="password" required="required"/>
+						<div class="form-row">
+							<div class="form-col">
+								<label for="username">Username</label>
+								<input type="text" name="username" required="required"/>
+							</div>
+							<div class="form-col">
+								<label for="password">Password</label>
+								<input type="password" name="password" required="required"/>
+							</div>
 						</div>
 						<div class="form-button-bar">
 							<button type="submit">Submit</button>
@@ -73,13 +92,15 @@
 				</div>
 				<div id="register-first-last">
 					<form action="#" class="register-form" method="post" name="login">
-						<div class="form-col">
-							<label for="firstname">First Name</label>
-							<input type="text" name="firstname"  required="required"/>
-						</div>
-						<div class="form-col">
-							<label for="lastname">Last Name</label>
-							<input type="text" name="lastname"  required="required"/>
+						<div class="form-row">
+							<div class="form-col">
+								<label for="firstname">First Name</label>
+								<input type="text" name="firstname"  required="required"/>
+							</div>
+							<div class="form-col">
+								<label for="lastname">Last Name</label>
+								<input type="text" name="lastname"  required="required"/>
+							</div>
 						</div>
 						<div class="form-button-bar">
 							<button type="submit">Submit</button>
@@ -91,19 +112,22 @@
 	</div>
 	<!-- side content of the page right -->
 	<div id="side-content-right">
-		<div id="logo-menu">
+		<div id="sponsor-logos">
 			<img src="images/sport-man-sml.gif" />
 			<img src="images/coaching-man-small.gif" />
 			<img src="images/ris-logo-sml.gif" />
 		</div>
-		<a href="#" class="button blarge sidebar-button">Return to Start Page</a>
+		<a href="#" class="circle-arrow-left">Return to Start Page</a>
 	</div>	
 	
-	<!-- footer -->
-	<footer>
-			<p>Respect in Sport is a registered trademark of Respect Group Inc.</p>
-	</footer>
 </div>
+
+<!-- footer -->
+<footer>
+	<div class="centered-content">
+		<p>Respect in Sport is a registered trademark of Respect Group Inc.</p>
+	</div>
+</footer>
 
 
 <script src="js/jquery.min.js"></script>

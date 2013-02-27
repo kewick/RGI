@@ -20,7 +20,7 @@ body {
 
 /* GLOBAL FORMATTING
 ------------------------------------------------------------------------------------*/
-p{
+p, li{
 	line-height:1.5em;
 }
 
@@ -148,11 +148,11 @@ select{
 	margin:0 0 20px 0;
 	padding: 20px;
 	position:relative;
-	width:680px;
+	width:600px;
 }
 
 .form-block .form-row{
-	margin-top:15px;
+	margin-top:20px;
 }
 .form-block .form-row:first-child{
 	margin-top:0;
@@ -170,22 +170,22 @@ select{
 
 .form-block .form-row .form-col{
 	float:left;
-	width:330px;
+	width:270px;
 }
 .form-block .form-row .form-col:first-child{
 	margin-right:20px;
 }
 
 .form-block.with-step{
-	padding:10px 35px;
+	padding:10px 20px 10px 35px;
+	width:585px;
 }
 
 .form-block.with-step .step {
-	font-size: 20px;
 	font-weight: bold;
-	left:10px;
-	position:absolute;
-	top:8px;
+	left: 10px;
+	position: absolute;
+	top: 9px;
 }
 
 .form-block.with-step .next-button{
@@ -195,6 +195,7 @@ select{
 }
 
 
+.form-block .form-row > label,
 .form-block .form-row .form-col > label{
 	display:block;
 	font-family: "Myriad Pro", Arial;
@@ -202,16 +203,22 @@ select{
 	margin-bottom: 5px;
 }
 
+.form-block .form-row input[type="text"],
+.form-block .form-row input[type=email],
+.form-block .form-row input[type=password],
+.form-block .form-row input[type=number],
+.form-block .form-row select,
+.form-block .form-row textarea,
+.form-block .form-row ul.checkbox-tree{
+	margin-top:3px;
+	width:380px;
+}
+
 .form-block .form-row .form-col input[type="text"],
 .form-block .form-row .form-col input[type=email],
 .form-block .form-row .form-col input[type=password],
-.form-block .form-row .form-col input[type=number],
-.form-block .form-row .form-col select,
-.form-block .form-row .form-col textarea,
-.form-block .form-row .form-col ul.checkbox-tree{
-	float:left;
-	margin-top:3px;
-	width:280px;
+.form-block .form-row .form-col input[type=number]{
+	width:260px;
 }
 
 .form-block .form-row .form-col .radio-form-col{
@@ -349,16 +356,6 @@ header .centered-content h1 .small{
 	font-size:24px;
 }
 
-header .centered-content #sponsor-logos{
-	bottom:5px;
-	position:absolute;
-	right:0;
-	width:290px;
-}
-
-header .centered-content #sponsor-logos img{
-	margin-left:3px;
-}
 
 
 /* CONTENT
@@ -372,11 +369,7 @@ header .centered-content #sponsor-logos img{
 	float: left;
 	margin-right:20px;
 	position: relative;
-	width: 720px;
-}
-
-#content-wrapper.narrow-content #main-content{
-	width:640px;
+	width: 640px;
 }
 
 #content-wrapper  #main-content .info-box { 
@@ -394,13 +387,20 @@ header .centered-content #sponsor-logos img{
 ------------------------------------------------------------------------------------*/
 #side-content-right {
 	float: left;
-	width: 220px;
+	width: 300px;
 }
 
-#content-wrapper #side-content-right.narrow-content{
-	width:300px;
+#side-content-right #sponsor-logos{
+	margin-bottom:20px;
+	text-align:right;
 }
 
+#side-content-right #sponsor-logos img{
+	margin-left:9px;
+}
+#side-content-right #sponsor-logos img:first-child{
+	margin-left:0;
+}
  
 /* FOOTER
 ------------------------------------------------------------------------------------*/
@@ -495,7 +495,8 @@ ul.start-page-options li a.button {
 #login-form{
 	width:260px;
 }
-#login-form .form-col input{
+#login-form .form-row input[type="text"],
+#login-form .form-row input[type="password"]{
 	width:250px;
 }
 
