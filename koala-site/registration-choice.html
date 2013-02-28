@@ -70,7 +70,7 @@
 			<div class="form-button-bar center-text">
 				<a href="#" id="button-user-password" class="button blarge bbright">Username &amp; Password</a>
 				<a href="#" id="button-first-last" class="button blarge bbright">First and Last Name</a>
-				<a href="#" id="button-first-last" class="button blarge bbright">Certificate Lookup</a>
+				<a href="#" id="button-cert-lookup" class="button blarge bbright">Certificate Lookup</a>
 			</div>
 			<div class="registration-options">
 				<div id="register-user-password">
@@ -158,16 +158,20 @@ jQuery(function(){
 	
 	var registerUserPass = $('#register-user-password'),
     registerName = $('#register-first-last'),
-    buttonUserPass = $('#button-user-password');
-    buttonName = $('#button-first-last');
+	registerCert = $('#register-cert-lookup'),
+    buttonUserPass = $('#button-user-password'),
+    buttonName = $('#button-first-last'),
+	buttonCert = $('#button-cert-lookup');
 
 	registerUserPass.hide();
 	registerName.hide();
+	registerCert.hide();
 
 	buttonUserPass.click(function(e) {
 		e.preventDefault();
 		pageController.removeAllErrorQtips();
 		registerName.hide();
+		registerCert.hide();
 		registerUserPass.show();
 	});
 
@@ -175,7 +179,16 @@ jQuery(function(){
 		e.preventDefault();
 		pageController.removeAllErrorQtips();
 		registerUserPass.hide();
+		registerCert.hide();
 		registerName.show();
+	});
+	
+	buttonCert.click(function(e) {
+		e.preventDefault();
+		pageController.removeAllErrorQtips();
+		registerName.hide();
+		registerUserPass.hide();
+		registerCert.show();
 	});
 	
 });
