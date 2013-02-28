@@ -14,59 +14,73 @@
 
 </head>
 <body id="registration-section">
-<div class="container"> 
-	<!-- the header -->
-	<header>
+
+<div id="nav-wrapper">
+	<div class="top-border"></div>
+	<nav id="main-nav" class="centered-content">
 		<div class="image-wrapper">
 			<div class="fadein">
 				<img src="images/sport-man-lrg.gif" />
 				<img src="images/ris-lrg.gif" />
 			</div>
 		</div>
-	</header>
+	</nav>
+</div>
+
+<!-- the header -->
+<header class="faded">
+	<img src="images/header-image.jpg" class="page-image" />
+	<div class="centered-content">
+		<h1>
+			<span class="small">Presents</span>
+			Respect in Sport
+		</h1>
+	</div>
+</header>
+
+<div id="content-wrapper" class="centered-content clearfix">
 	 
 	<!-- main content of the page -->
 	<div id="main-content">
 		<h2>Profile Not Found</h2>
 		<div class="info-box">
-			<p><img src="images/important-icon.gif" />The first name and lastname  entered does not match a profile on this system. Please try again or return to the previous page to try an alternate method</p>
+			<p><img src="images/warning-red.png" />The first name and lastname  entered does not match a profile on this system. Please try again or return to the previous page to try an alternate method</p>
 		</div>
-		<div class="form-block">
-			<div class="registration-options">
-				<div id="register-first-last">
-					<form action="#" class="register-form" method="post" name="login">
-						<div class="form-col">
-							<label for="firstname">First Name</label>
-							<input type="text" name="firstname"  required="required"/>
-						</div>
-						<div class="form-col">
-							<label for="lastname">Last Name</label>
-							<input type="text" name="lastname"  required="required"/>
-						</div>
-						<div class="form-button-bar">
-							<button type="submit">Submit</button>
-						</div>
-					</form>
+		<form action="#" class="register-form" method="post" name="login">
+			<div class="form-block">
+				<div class="form-row">
+					<label for="firstname">First Name</label>
+					<input type="text" name="firstname"  required="required"/>
+				</div>
+				<div class="form-row">
+					<label for="lastname">Last Name</label>
+					<input type="text" name="lastname"  required="required"/>
 				</div>
 			</div>
-		</div>	
+			<div class="form-button-bar">
+				<button type="submit">Submit</button>
+			</div>
+		</form>
 	</div>
 	<!-- side content of the page right -->
 	<div id="side-content-right">
-		<div id="logo-menu">
+		<div id="sponsor-logos">
 			<img src="images/sport-man-sml.gif" />
 			<img src="images/coaching-man-small.gif" />
 			<img src="images/ris-logo-sml.gif" />
 		</div>
-		<a href="#" class="button blarge sidebar-button">Return to Start Page</a>
-		<a href="#" class="button blarge sidebar-button">Return to Previous Page</a>
+		<a href="#" class="circle-arrow-left">Return to Start Page</a>
+		<a href="#" class="circle-arrow-left">Return to Previous Page</a>
 	</div>	
-	
-	<!-- footer -->
-	<footer>
-			<p>Respect in Sport is a registered trademark of Respect Group Inc.</p>
-	</footer>
 </div>
+
+<footer>
+	<div class="centered-content">
+		<p>Respect in Sport is a registered trademark of Respect Group Inc.</p>
+	</div>
+</footer>
+
+
 
 
 <script src="js/jquery.min.js"></script>

@@ -14,55 +14,74 @@
 
 </head>
 <body id="registration-section">
-<div class="container"> 
-	<!-- the header -->
-	<header>
+
+<div id="nav-wrapper">
+	<div class="top-border"></div>
+	<nav id="main-nav" class="centered-content">
 		<div class="image-wrapper">
 			<div class="fadein">
 				<img src="images/sport-man-lrg.gif" />
 				<img src="images/ris-lrg.gif" />
 			</div>
 		</div>
-	</header>
+	</nav>
+</div>
+
+<!-- the header -->
+<header class="faded">
+	<img src="images/header-image.jpg" class="page-image" />
+	<div class="centered-content">
+		<h1>
+			<span class="small">Presents</span>
+			Respect in Sport
+		</h1>
+	</div>
+</header>
+
+<div id="content-wrapper" class="centered-content clearfix">
 	 
 	<!-- main content of the page -->
 	<div id="main-content">
 		<h2>Registration Codes</h2>
-		<p>Some organizations have provided users with a Pre-Registration Code for administrative purposes which must be entered during registration. If your organization provided you a code, enter it in the box provided and click Continue. Pre-Registration Codes can NOT be entered after this point. If you do not have a Pre-Registration Code, click the button "I am not using a Pre-Registration Code". If you believe you are supposed to have a code but do not have it available now, click the Logout button and contact your organization. Once you have been provided with the code, log back in to the program with the Username and Password you have created. The system will remember you left at the Pre-Registration Code page and you will be requested to enter the code.</p>
 		<div class="info-box">
-			<p><img src="images/important-icon.gif" />Please note the Helpdesk for this program does not have access to codes and cannot provide assistance in this regard. You must contact your organization to access these codes.</p>
+			<p>Some organizations have provided users with a Pre-Registration Code for administrative purposes which must be entered during registration. If your organization provided you a code, enter it in the box provided and click Continue. Pre-Registration Codes can NOT be entered after this point. If you do not have a Pre-Registration Code, click the button "I am not using a Pre-Registration Code". If you believe you are supposed to have a code but do not have it available now, click the Logout button and contact your organization. Once you have been provided with the code, log back in to the program with the Username and Password you have created. The system will remember you left at the Pre-Registration Code page and you will be requested to enter the code.</p>
 		</div>
-		<div class="form-block">
-			<div class="registration-codes">
-				<form action="#" class="register-form" method="post" name="login">
-					<div class="form-col">
-						<label for="pre-registration-code">Enter Pre-Registration Code #</label>
-						<input type="text" name="pre-registration-code" required="required"/>
-					</div>
-					<div class="form-button-bar">
-						<button type="submit">Submit</button>
-						<a href="#" class="button bsmall">I am Not using a Pre-Registration Code #</a>
-					</div>
-				</form>
+		<div class="info-box">
+			<p><img src="images/warning-blue.png" />Please note the Helpdesk for this program does not have access to codes and cannot provide assistance in this regard. You must contact your organization to access these codes.</p>
+		</div>
+		<form action="#" class="register-form" method="post" name="login">
+			<div class="form-block">
+				<div class="form-row">
+					<label for="pre-registration-code">Enter Pre-Registration Code #</label>
+					<input type="text" name="pre-registration-code" required="required"/>
+				</div>
+			</div>	
+			<div class="form-button-bar">
+				<button type="submit">Submit</button>
+				<a href="#" class="button bsmall">I am Not using a Pre-Registration Code #</a>
 			</div>
-		</div>	
+		</form>
 	</div>
+	
 	<!-- side content of the page right -->
 	<div id="side-content-right">
-		<div id="logo-menu">
+		<div id="sponsor-logos">
 			<img src="images/sport-man-sml.gif" />
 			<img src="images/coaching-man-small.gif" />
 			<img src="images/ris-logo-sml.gif" />
 		</div>
-		<a href="#" class="button blarge sidebar-button">Return to Start Page</a>
-		<a href="#" class="button blarge sidebar-button">Logout</a>
+		<a href="#" class="circle-arrow-left">Return to Start Page</a>
+		<a href="#" class="circle-arrow-left">Return to Previous Page</a>
 	</div>	
-	
-	<!-- footer -->
-	<footer>
-			<p>Respect in Sport is a registered trademark of Respect Group Inc.</p>
-	</footer>
 </div>
+
+<footer>
+	<div class="centered-content">
+		<p>Respect in Sport is a registered trademark of Respect Group Inc.</p>
+	</div>
+</footer>
+
+
 
 <script src="js/jquery.min.js"></script>
 <script src="js/plugins/jquery.shuffle.js"></script>

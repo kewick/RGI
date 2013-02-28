@@ -89,7 +89,8 @@ button[type=submit]{
 }
 
 .button.bsmall{
-	
+	font-size:16px;
+	padding:6px 10px 5px 10px;
 }
 
 .button.blarge{
@@ -98,9 +99,12 @@ button[type=submit]{
 }
 
 a.circle-arrow-left{
+	background:transparent url("../images/circle-arrow-left.png") no-repeat left top;
+	color:#2eb6e0;
 	display:inline-block;
 	font-size:15px;
 	height:32px;
+	margin-bottom:15px;
 	padding:13px 0 0 55px;
 	text-decoration:none;
 	*display:inline;
@@ -226,7 +230,11 @@ select{
 }
 
 .form-button-bar{
-	margin:15px 0 0 0;
+	margin:15px 0 20px 0;
+}
+
+.form-block .form-button-bar{
+	margin-bottom:0;
 }
 
 .privacy-policy-box{
@@ -362,6 +370,7 @@ header .centered-content h1 .small{
 ------------------------------------------------------------------------------------*/
 #content-wrapper {
 	margin-bottom:50px;
+	min-height:300px;
 	padding:0;
 }
 
@@ -374,12 +383,12 @@ header .centered-content h1 .small{
 
 #content-wrapper  #main-content .info-box { 
 	margin: 0 0 20px 0;
-	padding: 10px;
+	padding: 15px 20px 20px 20px;
 }
 
 #content-wrapper #main-content .info-box img {
 	float: left;
-	margin: 0 8px 0 0;
+	margin: -8px 8px 0 0;
 }
 
  
