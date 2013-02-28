@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+	<title>Respect Group - Registration Certificate Lookup</title>
+
+	<link rel="stylesheet" href="css/normalize.css" type="text/css" media="screen" />
+	<link rel="stylesheet" href="js/plugins/qtip/jquery.qtip.min.css" type="text/css" media="screen" />
+	
+	<link rel="stylesheet" href="css/styles.css" type="text/css" media="screen" />
+	<link rel="stylesheet" href="css/ris.css" type="text/css" media="screen" />
+
+	<script src="js/modernizr.custom.min.js"></script>
+
+</head>
+<body id="registration-section">
+<div class="container"> 
+	<!-- the header -->
+	<header>
+		<div class="image-wrapper">
+			<div class="fadein">
+				<img src="images/sport-man-lrg.gif" />
+				<img src="images/ris-lrg.gif" />
+			</div>
+		</div>
+	</header>
+	 
+	<!-- main content of the page -->
+	<div id="main-content">
+		<h2>Certificate Match Found</h2>
+		<div class="info-box">
+			<p><img src="images/important-icon.gif" />A certificate has been found attached to the profile of (NAME PLACEHOLDER HERE). To ensure we are pulling up the correct profile, please respond to the IQ Question below</p>
+		</div>
+		<div class="form-block">
+			<div class="id-questions">
+				<form action="#" class="register-form" method="post" name="login">
+					<div class="form-col">
+						<label for="id-answer">ID Question</label>
+						<input type="text" name="id-answer" required="required"/>
+					</div>
+					<div class="form-button-bar">
+						<button type="submit">Submit</button>
+					</div>
+				</form>
+			</div>
+		</div>	
+	</div>
+	<!-- side content of the page right -->
+	<div id="side-content-right">
+		<div id="logo-menu">
+			<img src="images/sport-man-sml.gif" />
+			<img src="images/coaching-man-small.gif" />
+			<img src="images/ris-logo-sml.gif" />
+		</div>
+		<a href="#" class="button blarge sidebar-button">Return to Start Page</a>
+		<a href="#" class="button blarge sidebar-button">Return to Previous Page</a>
+	</div>	
+	
+	<!-- footer -->
+	<footer>
+			<p>Respect in Sport is a registered trademark of Respect Group Inc.</p>
+	</footer>
+</div>
+
+<script src="js/jquery.min.js"></script>
+<script src="js/plugins/jquery.shuffle.js"></script>
+<script src="js/plugins/jquery.validate.js"></script>
+<script src="js/plugins/qtip/jquery.qtip.min.js"></script>
+
+<script src="js/RGI.js"></script>
+<script src="js/RGI.PageController.js"></script>
+
+
+<script>
+jQuery(function(){
+	
+	var pageController = new RGI.PageController({
+		extraValidateSettings : {
+			rules : {
+				"id-answer" : { required : true, minlength : 3 }
+			},
+			messages : {
+				"id-answer" : {
+					required : "Please enter an answer"
+				}
+			}
+		}
+	});
+	
+});
+</script>
+
+</body>
+</html>

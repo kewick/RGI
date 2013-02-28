@@ -74,7 +74,7 @@
 			</div>
 			<div class="registration-options">
 				<div id="register-user-password">
-					<form action="#" class="register-form" method="post" name="login">
+					<form action="#" class="register-form" method="post" name="username-password-lookup">
 						<div class="form-row">
 							<div class="form-col">
 								<label for="username">Username</label>
@@ -91,7 +91,7 @@
 					</form>
 				</div>
 				<div id="register-first-last">
-					<form action="#" class="register-form" method="post" name="login">
+					<form action="#" class="register-form" method="post" name="first-lname-lookup">
 						<div class="form-row">
 							<div class="form-col">
 								<label for="firstname">First Name</label>
@@ -100,6 +100,19 @@
 							<div class="form-col">
 								<label for="lastname">Last Name</label>
 								<input type="text" name="lastname"  required="required"/>
+							</div>
+						</div>
+						<div class="form-button-bar">
+							<button type="submit">Submit</button>
+						</div>
+					</form>
+				</div>
+				<div id="register-cert-lookup">
+					<form action="#" class="register-form" method="post" name="certLookup">
+						<div class="form-row">
+							<div class="form-col">
+								<label for="certification-lookup">Enter the certificate number we can use to look up your profile</label>
+								<input type="text" name="certLookupField"  required="required"/>
 							</div>
 						</div>
 						<div class="form-button-bar">
