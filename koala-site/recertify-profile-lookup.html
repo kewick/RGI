@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
-	<title>Respect Group Certification Lookup Success</title>
+	<title>Respect Group Recertify Profile Lookup</title>
 
 	
 	<link rel="stylesheet" href="css/normalize.css" type="text/css" media="screen" />
@@ -50,18 +50,42 @@
 	 
 	<!-- main content of the page -->
 	<div id="main-content">
-		<h2>Look Up a Certification Success</h2>
+		<h2>Recertify - Profile Lookup</h2>
 		<div class="info-box">
-			<p><img src="images/check-green.png" />The following certificates were found matching the information provided:</p>
+			<p>To initiate recertification, identify which program and client you wish to start recertify for.</p>
+			<p>Let’s start by finding your user profile. Enter your Username, or First Name, Last Name and Date of Birth below.</p>
 		</div>
-		<div class="info-box">
-			<p>(PROGRAM TYPE PH) - (PROGRAM TYPE PH) - (CERT NUMBER PH)</p>
-			<p>(NAME ON CERTIFICATE PH) - (CERTIFICATE PH)</p>
-		</div>
-		<div class="form-button-bar">
-			<a href="#" class="button blarge bbright">Print Certifcate</a>
-			<a href="#" class="button blarge bbright">Take Me There</a>
-		</div>
+		<form action="#" method="post" name="certificate">
+			<div class="form-block">
+				<div class="form-row">
+					<label for="firstname">First Name</label>
+					<input type="text" name="firstname"  required="required"/>
+				</div>
+				<div class="form-row">
+					<label for="lastname">Last Name</label>
+					<input type="text" name="lastname"  required="required"/>
+				</div>
+				<div class="form-row dob">
+					<label for="date-of-birth">Date of Birth</label>
+					<input type="text" name="birthdate" class="datepicker"  required="required"/>
+				</div>
+			</div>
+			<div class="form-button-bar">
+				<button type="submit" class="login-button">Submit</button>
+			</div>
+		</form>
+		<form action="#" method="post" name="certificate">
+			<div class="form-block">
+				<h3>Or enter your Username</h3>
+				<div class="form-row">
+					<label for="username">Username</label>
+					<input type="text" name="username" required="required" class="showTip"/>
+				</div>
+			</div>
+			<div class="form-button-bar">
+				<button type="submit" class="login-button">Submit</button>
+			</div>
+		</form>
 	</div>
 	
 	<!-- side content of the page right -->

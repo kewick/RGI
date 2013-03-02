@@ -2,27 +2,19 @@
 <html>
 <head>
 	<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
-	<title>Respect Group Certification Lookup Success</title>
+	<title>Respect Group - Registration Port Certificate</title>
 
-	
 	<link rel="stylesheet" href="css/normalize.css" type="text/css" media="screen" />
-	<link rel="stylesheet" href="css/jquery-ui-1.10.1.custom.css" type="text/css" media="screen" />
 	<link rel="stylesheet" href="js/plugins/qtip/jquery.qtip.min.css" type="text/css" media="screen" />
-	<link rel="stylesheet" href="js/plugins/checkboxtree/jquery.checkboxtree.css" type="text/css" media="screen" />
 	
 	<link rel="stylesheet" href="css/styles.css" type="text/css" media="screen" />
 	<link rel="stylesheet" href="css/ris.css" type="text/css" media="screen" />
-	
-	<script src="js/jquery.min.js"></script>
-	<script src="js/plugins/jquery.validate.js"></script>
-	
+
 	<script src="js/modernizr.custom.min.js"></script>
-	
+
 </head>
-
-
 <body id="registration-section">
-
+	
 <div id="nav-wrapper">
 	<div class="top-border"></div>
 	<nav id="main-nav" class="centered-content">
@@ -50,18 +42,22 @@
 	 
 	<!-- main content of the page -->
 	<div id="main-content">
-		<h2>Look Up a Certification Success</h2>
+		<h2>Port a Certificate</h2>
 		<div class="info-box">
-			<p><img src="images/check-green.png" />The following certificates were found matching the information provided:</p>
+			<p><img src="images/warning-blue.png" />To Port a Certificate, you must be at the program website you are adding the certificate to.  If you are not sure if you are at the correct location, contact the company or organization who requested you complete this program.</p>
 		</div>
-		<div class="info-box">
-			<p>(PROGRAM TYPE PH) - (PROGRAM TYPE PH) - (CERT NUMBER PH)</p>
-			<p>(NAME ON CERTIFICATE PH) - (CERTIFICATE PH)</p>
-		</div>
-		<div class="form-button-bar">
-			<a href="#" class="button blarge bbright">Print Certifcate</a>
-			<a href="#" class="button blarge bbright">Take Me There</a>
-		</div>
+		<form action="#" class="register-form" method="post" name="certLookup">
+			<div class="form-block">
+				<div class="form-row">
+					<label for="certification-lookup">Enter the certificate number you wish to port exactly as it displays on your certificate.  If your certificate is successfully ported, complete the new company/organization registration form to complete the process</label>
+					<input type="text" name="certLookupField"  required="required"/>
+				</div>
+			</div>
+			<div class="form-button-bar">
+				<button type="submit">Submit</button>
+				<a href="#" class="button bsmall">Certificate Look Up</a>
+			</div>
+		</form>
 	</div>
 	
 	<!-- side content of the page right -->
@@ -72,11 +68,10 @@
 			<img src="images/ris-logo-sml.gif" />
 		</div>
 		<a href="#" class="circle-arrow-left">Return to Start Page</a>
-	</div>
-	
+		<a href="#" class="circle-arrow-left">Return to Previous Page</a>
+	</div>	
 </div>
 
-<!-- footer -->
 <footer>
 	<div class="centered-content">
 		<p>Respect in Sport is a registered trademark of Respect Group Inc.</p>
@@ -84,10 +79,10 @@
 </footer>
 
 
-<script src="js/jquery-ui-1.10.1.custom.min.js"></script>
+<script src="js/jquery.min.js"></script>
 <script src="js/plugins/jquery.shuffle.js"></script>
+<script src="js/plugins/jquery.validate.js"></script>
 <script src="js/plugins/qtip/jquery.qtip.min.js"></script>
-<script src="js/plugins/checkboxtree/jquery.checkboxtree.js"></script>
 
 <script src="js/RGI.js"></script>
 <script src="js/RGI.PageController.js"></script>
@@ -99,7 +94,6 @@ jQuery(function(){
 	
 });
 </script>
-
 
 </body>
 </html>

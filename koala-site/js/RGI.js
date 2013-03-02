@@ -76,8 +76,8 @@
 			validClass: 'input-valid',
 			rules: {
 				"username" : { required: true, minlength: 3 },
-				"password" : { required: true, minlength: 8 },
-				"confirmpassword" : { required: true, minlength: 8, equalTo:"[name='password']" },
+				"password" : { required: true, minlength: 6 },
+				"confirmpassword" : { required: true, minlength: 6, equalTo:"[name='password']" },
 				"firstname" : { required: true, minlength: 3 },
 				"lastname" : { required: true, minlength: 3 },
 				"email" : { required: true, email: true },

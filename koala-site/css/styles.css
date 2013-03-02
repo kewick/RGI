@@ -116,6 +116,10 @@ a.circle-arrow-left{
 	text-align:center;
 }
 
+.small-text{
+	font-size:0.9em;
+}
+
 .bold{
 	font-weight:bold;
 }

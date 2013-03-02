@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
-	<title>Respect Group Certification Lookup Success</title>
+	<title>Respect Group Recertify Login and Reset</title>
 
 	
 	<link rel="stylesheet" href="css/normalize.css" type="text/css" media="screen" />
@@ -50,18 +50,22 @@
 	 
 	<!-- main content of the page -->
 	<div id="main-content">
-		<h2>Look Up a Certification Success</h2>
-		<div class="info-box">
-			<p><img src="images/check-green.png" />The following certificates were found matching the information provided:</p>
-		</div>
-		<div class="info-box">
-			<p>(PROGRAM TYPE PH) - (PROGRAM TYPE PH) - (CERT NUMBER PH)</p>
-			<p>(NAME ON CERTIFICATE PH) - (CERTIFICATE PH)</p>
-		</div>
-		<div class="form-button-bar">
-			<a href="#" class="button blarge bbright">Print Certifcate</a>
-			<a href="#" class="button blarge bbright">Take Me There</a>
-		</div>
+		<h2>Recertify - Login and Reset</h2>
+		<form action="#" method="post" name="certificate">
+			<div class="form-block">
+				<div class="form-row">
+					<label for="username">Username</label>
+					<input type="text" name="username" required="required" class="showTip"/>
+				</div>
+				<div class="form-row">
+					<label for="password">Password</label>
+					<input type="password" name="password" required="required" class="showTip"/>
+				</div>
+			</div>
+			<div class="form-button-bar">
+				<button type="submit" class="login-button">Submit</button>
+			</div>
+		</form>
 	</div>
 	
 	<!-- side content of the page right -->

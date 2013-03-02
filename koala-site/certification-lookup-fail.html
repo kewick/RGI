@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
-	<title>Respect Group Certification Lookup Success</title>
+	<title>Respect Group Certification Lookup Fail</title>
 
 	
 	<link rel="stylesheet" href="css/normalize.css" type="text/css" media="screen" />
@@ -50,18 +50,43 @@
 	 
 	<!-- main content of the page -->
 	<div id="main-content">
-		<h2>Look Up a Certification Success</h2>
+		<h2>Look Up a Certification Failed!</h2>
 		<div class="info-box">
-			<p><img src="images/check-green.png" />The following certificates were found matching the information provided:</p>
+			<p><img src="images/warning-red.png" />It does not appear a certificate matching the information provided exists.</p>
+			<p>Entries must match exactly with what was entered during registration. Try again, or if you have a certificate number, enter the number below.  The First Name and Last Name associated to that number will be displayed.</p>
 		</div>
-		<div class="info-box">
-			<p>(PROGRAM TYPE PH) - (PROGRAM TYPE PH) - (CERT NUMBER PH)</p>
-			<p>(NAME ON CERTIFICATE PH) - (CERTIFICATE PH)</p>
-		</div>
-		<div class="form-button-bar">
-			<a href="#" class="button blarge bbright">Print Certifcate</a>
-			<a href="#" class="button blarge bbright">Take Me There</a>
-		</div>
+		<form action="#" method="post" name="certificate">
+			<div class="form-block">
+				<div class="form-row">
+					<label for="firstname">First Name</label>
+					<input type="text" name="firstname"  required="required"/>
+				</div>
+				<div class="form-row">
+					<label for="lastname">Last Name</label>
+					<input type="text" name="lastname"  required="required"/>
+				</div>
+				<div class="form-row dob">
+					<label for="date-of-birth">Date of Birth</label>
+					<input type="text" name="birthdate" class="datepicker"  required="required"/>
+				</div>
+			</div>
+			<div class="form-button-bar">
+				<button type="submit" class="login-button">Submit</button>
+			</div>
+		</form>
+		<form action="#" method="post" name="certificate">
+			<div class="form-block">
+				<h3>Or enter a certificate number</h3>
+				<div class="form-row">
+					<label for="certification-lookup">Certificate Number</label>
+					<input type="text" name="certLookupField"  required="required"/>
+				</div>
+			</div>
+			<div class="form-button-bar">
+				<button type="submit" class="login-button">Submit</button>
+				<a href="#" class="button bsmall">Help</a>
+			</div>
+		</form>
 	</div>
 	
 	<!-- side content of the page right -->

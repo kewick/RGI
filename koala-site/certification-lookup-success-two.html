@@ -52,16 +52,19 @@
 	<div id="main-content">
 		<h2>Look Up a Certification Success</h2>
 		<div class="info-box">
-			<p><img src="images/check-green.png" />The following certificates were found matching the information provided:</p>
+			<p><img src="images/check-green.png" />The certificate number you entered (XXXXXXXXXX) matches a profile with a First Name and Last Name of:  XXXXXX  XXXXXXX</p>
 		</div>
-		<div class="info-box">
-			<p>(PROGRAM TYPE PH) - (PROGRAM TYPE PH) - (CERT NUMBER PH)</p>
-			<p>(NAME ON CERTIFICATE PH) - (CERTIFICATE PH)</p>
-		</div>
-		<div class="form-button-bar">
-			<a href="#" class="button blarge bbright">Print Certifcate</a>
-			<a href="#" class="button blarge bbright">Take Me There</a>
-		</div>
+		<form action="#" method="post" name="certificate">
+			<div class="form-block">
+				<div class="form-row dob">
+					<label for="date-of-birth">Enter the appropriate Date of Birth to continue Certificate Look Up.</label>
+					<input type="text" name="birthdate" class="datepicker"  required="required"/>
+				</div>
+			</div>
+			<div class="form-button-bar">
+				<button type="submit" class="login-button">Submit</button>
+			</div>
+		</form>
 	</div>
 	
 	<!-- side content of the page right -->

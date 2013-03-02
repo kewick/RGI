@@ -2,8 +2,7 @@
 <html>
 <head>
 	<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
-	<title>Respect Group Certification Lookup</title>
-
+	<title>Respect Group Username Lookup Success</title>
 	
 	<link rel="stylesheet" href="css/normalize.css" type="text/css" media="screen" />
 	<link rel="stylesheet" href="css/jquery-ui-1.10.1.custom.css" type="text/css" media="screen" />
@@ -46,32 +45,30 @@
 	</div>
 </header>
 
-<div id="content-wrapper" class="centered-content clearfix">
-	 
+<div id="content-wrapper" class="centered-content clearfix"> 
 	<!-- main content of the page -->
 	<div id="main-content">
-		<h2>Look Up a Certification</h2>
+		<h2>Username Lookup Success!</h2>
 		<div class="info-box">
-			<p>Please enter your First Name, Last Name and Date of Birth below to view all certificates attached to your profile</p>
+			<p><img src="images/check-green.png" />A username with the matching last name and birthdate has been found on this site.<br/>The Username is:  XXXXXXXXXXX.</p>
+			<p>Enter your username and password below to Login or Look-Up Password.</p>
 		</div>
-		<form action="#" class="certification-lookup-form" method="post" name="login">
+		<form action="#" class="register-form" method="post" name="login">
 			<div class="form-block">
 				<div class="form-row">
-					<label for="firstname">First Name</label>
-					<input type="text" name="firstname"  required="required"/>
+					<label for="username">Username</label>
+					<input type="text" name="username" required="required" class="showTip"/>
 				</div>
 				<div class="form-row">
-					<label for="lastname">Last Name</label>
-					<input type="text" name="lastname"  required="required"/>
-				</div>
-				<div class="form-row dob">
-					<label for="date-of-birth">Date of Birth</label>
-					<input type="text" name="birthdate" class="datepicker"  required="required"/>
+					<label for="password">Password</label>
+					<input type="password" name="password" required="required" class="showTip"/>
 				</div>
 			</div>
+			
 			<div class="form-button-bar">
-				<button type="submit" class="login-button">Submit</button>
-			</div>
+				<button type="submit">Submit</button>
+				<a href="#" class="button bsmall">Password Look-Up</a>
+			</div>		
 		</form>
 	</div>
 	
@@ -82,7 +79,7 @@
 			<img src="images/coaching-man-small.gif" />
 			<img src="images/ris-logo-sml.gif" />
 		</div>
-		<a href="#" class="circle-arrow-left">Return to Start Page</a>
+		<a href="#" class="circle-arrow-left">Return to Login</a>
 	</div>
 	
 </div>
@@ -104,9 +101,51 @@
 <script src="js/RGI.PageController.js"></script>
 
 <script>
+var pageController;
+
 jQuery(function(){
 	
-	var pageController = new RGI.PageController();
+	pageController = new RGI.PageController({
+		extraValidateSettings : {
+			rules : {
+				"association" : {required : true},
+				"choose-question" : {required : true},
+				"secure-choice-answer" : {required : true}
+			},
+			messages : {
+				"association" : "Please select at least one item",
+				"choose-question" : "Please choose a question",
+				"custom-question" : "Please enter a custom question",
+				"secure-choice-answer" : "Please enter an answer"
+			}
+		}
+	});
+	
+	
+	jQuery("select[name='choose-question']").on("change", function(){
+		var $target = jQuery(this);
+		var $customQuestionInput = jQuery("input#custom-question");
+		var $questionValueHolder = jQuery("input[name='secure-self-question']");
+		
+		//show the custom question box
+		if($target.val() == "secure-self-enter"){
+			$questionValueHolder.val("");
+			$customQuestionInput.parent().show();
+			$customQuestionInput.prop("required", true)
+			.on("keyup", function(){
+				$questionValueHolder.val($customQuestionInput.val()); //set value from the custom question
+			});
+		} 
+		
+		//hide custom question box
+		else {
+			$customQuestionInput.prop("required", false).parent().hide();
+			$questionValueHolder.val($target.val()); //set value from the select
+		}
+		
+		//need to update any qtips position
+		pageController.updateQtipPosition();
+	});
 	
 });
 </script>
