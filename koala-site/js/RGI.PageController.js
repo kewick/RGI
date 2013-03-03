@@ -74,6 +74,14 @@
 					 changeYear: true
 			    });	
 			}
+			
+			$("form").find("a.help-icon").qtip({
+				position: {
+					my: "left center",
+					at: "right center",
+					viewport: $(window)
+				}
+			});
 		}
 		
 		/**

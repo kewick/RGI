@@ -229,6 +229,16 @@ select{
 	width:260px;
 }
 
+.form-block .form-row a.help-icon{
+	background:transparent url("../images/help-icon.png") no-repeat left top;
+	display:inline-block;
+	height:16px;
+	margin-left:4px;
+	width:16px;
+	*display:inline;
+	zoom:1;
+}
+
 .form-block .form-row .form-col .radio-form-col{
 	padding:5px;
 }
