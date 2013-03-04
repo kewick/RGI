@@ -9,6 +9,7 @@
 		var self = this;
 		var $parent = $("body");
 		
+		var $mainMenu = $parent.find("nav#main-nav ul#menu");
 		var $checkboxTree;
 		
 		self.options = {
@@ -28,6 +29,10 @@
 			initSlideShow();
 			initForms();
 			initCheckboxTree();
+			
+			if($mainMenu.length > 0){
+				initMainMenu();
+			}
 		}
 		initialize();
 		
@@ -54,6 +59,17 @@
 				$('.fadein img:gt(0)').hide();
 				setInterval(function(){$('.fadein :first-child').fadeOut().next('img').fadeIn().end().appendTo('.fadein');}, 5000);
 			}
+		}
+		
+		function initMainMenu(){
+			$mainMenu.find("> li").on({
+				mouseenter : function(){
+					$(this).addClass("active");
+				},
+				mouseleave : function(){
+					$(this).removeClass("active");
+				}
+			})
 		}
 		
 		/** 

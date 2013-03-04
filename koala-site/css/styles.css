@@ -279,18 +279,6 @@ select{
 	z-index:1;
 }
 
-#nav-wrapper nav h1{
-	position: absolute;
-	right: 0;
-	top: 14px;
-	font-size: 40px;
-}
-#nav-wrapper nav h1 .small{
-	display:inline;
-	font-size:24px;
-	margin:0 10px 0 0;
-}
-
 #nav-wrapper nav .image-wrapper {
 	height: 125px;
 	left:0;
@@ -314,28 +302,60 @@ select{
 }
 
 
-
-/*--- soon to be added horizontal menu ---*/
-#nav-wrapper nav #menu {
-	float: left;
+#nav-wrapper nav ul#menu {
+	height: 48px;
+	margin: 0 0 0 225px;
+	padding-top: 12px;
 }
-#nav-wrapper nav #menu li {
+#nav-wrapper nav ul#menu > li{
 	display: block;
 	float: left;
+	position:relative;
 }
-#nav-wrapper nav #menu li a {
+#nav-wrapper nav ul#menu > li > a {
+	color:#ffffff;
 	display: block;
 	text-decoration: none;
-	height: 50px;
-	width: 125px;
-	padding: 5px 10px 5px 10px;
+	height: 23px;
+	padding: 20px 10px 5px 10px;
 }
-/* soon to be added menu stylings */
-#nav-wrapper nav #menu li.current_page_item a {
+
+#nav-wrapper nav ul#menu > li > a:hover,
+#nav-wrapper nav ul#menu > li.active > a,
+#nav-wrapper nav ul#menu > li.current > a {
+	background-color:#0777a5;
 }
-#nav-wrapper nav #menu li.first a {
+
+#nav-wrapper nav ul#menu > li ul{
+	background-color:#0777a5;
+	display:none;
+	left:0;
+	margin:0;
+	padding:0;
+	position:absolute;
+	top:48px;
+	width:150px;
 }
-#nav-wrapper nav #menu li.last a {
+
+#nav-wrapper nav ul#menu > li.active ul{
+	display:block;
+}
+
+#nav-wrapper nav ul#menu > li ul li{
+	display:block;
+	list-style:none;
+}
+
+#nav-wrapper nav ul#menu > li ul li a{
+	color:#ffffff;
+	display:block;
+	padding:5px 10px;
+	text-decoration:none;
+}
+
+#nav-wrapper nav ul#menu > li ul li a:hover,
+#nav-wrapper nav ul#menu > li ul li.current a{
+	background-color:#06587a;
 }
 
 
@@ -405,6 +425,7 @@ header .centered-content h1 .small{
 	margin: -8px 8px 0 0;
 }
 
+
  
 /* SIDE BAR RIGHT
 ------------------------------------------------------------------------------------*/
@@ -423,6 +444,12 @@ header .centered-content h1 .small{
 }
 #side-content-right #sponsor-logos img:first-child{
 	margin-left:0;
+}
+
+#side-content-right #current-user-info{
+	background-color:#fff;
+	margin-bottom:20px;
+	padding:20px;
 }
  
 /* FOOTER
@@ -528,6 +555,18 @@ ul.start-page-options li a.button {
 ------------------------------------------------------------------------------------*/
 .registration-options{
 	margin-top:20px;
+}
+
+
+/* PROGRAM UPDATES
+------------------------------------------------------------------------------------*/
+#content-wrapper #main-content #announcement-block .announcement{
+	border-bottom:1px solid #e6e6e6;
+	padding:20px 0 10px 0;
+}
+
+#content-wrapper #main-content #announcement-block .announcement .announcement-date{
+	font-weight:bold;
 }
 
 
