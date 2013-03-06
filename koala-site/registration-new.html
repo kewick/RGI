@@ -49,41 +49,45 @@
 	<!-- main content of the page -->
 	<div id="main-content">
 		<h2>Program Registration</h2>
-		
+		<div class="info-box">
+			<p>Fields marked with * are required.</p>
+		</div>
 		<form action="#" class="register-form" method="post" name="login">
 			<input type="hidden" value="" name="secure-self-question" />
 			
 			<div class="form-block">
 				<h3>Profile Information</h3>
 				<div class="form-row">
-					<label for="firstname">First Name</label>
+					<label for="firstname">First Name*</label>
 					<input type="text" name="firstname"  required="required"/>
-					<a class="help-icon" href="javascript:void(0);" title="Put First Name help here."></a>
+					<span class="input-icon help-icon" title="Put First Name help here."></span>
 				</div>
 				<div class="form-row">
-					<label for="lastname">Last Name</label>
+					<label for="lastname">Last Name*</label>
 					<input type="text" name="lastname"  required="required"/>
-					<a class="help-icon" href="javascript:void(0);" title="Put Last Name help here."></a>
+					<span class="input-icon" title="Put Last Name help here."></span>
 				</div>
 				<div class="form-row">
-					<label for="email">Email</label>
+					<label for="email">Email*</label>
 					<input type="email" name="email"  required="required" class="showTip"/>
-					<a class="help-icon" href="javascript:void(0);" title="Put Email help here."></a>
+					<span class="input-icon help-icon" title="Put Email help here."></span>
 				</div>				
 				<div class="form-row">
-					<label for="birthdate">Date of Birth</label>
+					<label for="birthdate">Date of Birth*</label>
 					<input type="text" name="birthdate" class="datepicker"  required="required"/>
+					<span class="input-icon"></span>
 				</div>
 				<div class="form-row">
-					<label for="gender">Gender</label>
+					<label for="gender">Gender*</label>
 					<div class="radio-form-col">
 						<input type="radio" name="gender" value="M"  required="required"> Male &nbsp;
 						<input type="radio" name="gender" value="F"  required="required"> Female
 					</div>
 				</div>
 				<div class="form-row">
-					<label for="postal-code">Postal Code</label>
+					<label for="postal-code">Postal Code*</label>
 					<input type="text" name="addressPostalCode" class="custom-field" data-customConditions="postalCode" data-customConditionVals="true" data-requiredMessage="Please enter a postal code" required="required"/>
+					<span class="input-icon"></span>
 					<script>
 						jQuery.validator.addMethod("postalCode", function(value) {
 						     return value.match(/^[a-zA-Z][0-9][a-zA-Z](-| )?[0-9][a-zA-Z][0-9]$/);
@@ -91,11 +95,12 @@
 					</script>
 				</div>
 				<div class="form-row">
-					<label for="postal-code">NCCP #</label>
+					<label for="postal-code">NCCP #*</label>
 					<input type="text" name="sm_nccp" class="custom-field" data-customConditions="minlength,maxlength,number" data-customConditionVals="3,10,true" data-requiredMessage="Please enter a NCCP #" required="required"/>
+					<span class="input-icon"></span>
 				</div>
 				<div class="form-row">
-					<label for="association">Association</label>
+					<label for="association">Association*</label>
 					<!-- checkbox-tree class is needed to initialize the plugin -->
 					<ul id="association" class="checkbox-tree">
 						<li>
@@ -119,19 +124,22 @@
 			<div class="form-block">
 				<h3>Account Information</h3>
 				<div class="form-row">
-					<label for="username">Username</label>
-					<input type="text" name="username" required="required" class="showTip"/>
+					<label for="username">Username*</label>
+					<input type="text" name="username" required="required"/>
+					<span class="input-icon"></span>
 				</div>
 				<div class="form-row">
-					<label for="password">Password</label>
-					<input type="password" name="password" required="required" class="showTip"/>
+					<label for="password">Password*</label>
+					<input type="password" name="password" required="required"/>
+					<span class="input-icon"></span>
 				</div>
 				<div class="form-row">
-					<label for="confirmpassword">Confirm Password</label>
+					<label for="confirmpassword">Confirm Password*</label>
 					<input type="password" name="confirmpassword"  required="required"/>
+					<span class="input-icon"></span>
 				</div>
 				<div class="form-row">
-					<label for="security-question">Secure Question</label>
+					<label for="security-question">Secure Question*</label>
 					<!-- this select is just a dummy. real value from hidden input 'security-question' -->
 					<select name="choose-question">
 						<option value="" selected disabled>Select a question</option>
@@ -142,14 +150,17 @@
 						<option value="secure-honeymoon">Where did you go on your honeymoon?</option>
 						<option value="secure-self-enter">Select your own</option>
 					</select>
+					<span class="input-icon"></span>
 				</div>
 				<div class="form-row" style="display:none;">
-					<label for="custom-question">Custom Security Question</label>
+					<label for="custom-question">Custom Security Question*</label>
 					<input type="text" name="custom-question" id="custom-question" />
+					<span class="input-icon"></span>
 				</div>
 				<div class="form-row">
-					<label for="security-choice-answer">Secure Answer</label>
+					<label for="security-choice-answer">Secure Answer*</label>
 					<input type="text" name="secure-choice-answer"  required="required"/>
+					<span class="input-icon"></span>
 				</div>
 			</div>
 			

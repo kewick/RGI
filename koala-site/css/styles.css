@@ -229,16 +229,6 @@ select{
 	width:260px;
 }
 
-.form-block .form-row a.help-icon{
-	background:transparent url("../images/help-icon.png") no-repeat left top;
-	display:inline-block;
-	height:16px;
-	margin-left:4px;
-	width:16px;
-	*display:inline;
-	zoom:1;
-}
-
 .form-block .form-row .form-col .radio-form-col{
 	padding:5px;
 }
@@ -255,6 +245,29 @@ select{
 	height:250px;
 	margin-bottom:20px;
 	overflow:auto;
+}
+
+
+
+.form-block .form-row .input-icon{
+	display:inline-block;
+	height:16px;
+	margin-left:4px;
+	width:16px;
+	*display:inline;
+	zoom:1;
+}
+
+.form-block .form-row .input-icon.help-icon{
+	background:transparent url("../images/icon-help.png") no-repeat left top;
+}
+
+.form-block .form-row .input-icon.correct-icon{
+	background:transparent url("../images/icon-correct.png") no-repeat left top;
+}
+
+.form-block .form-row .input-icon.wrong-icon{
+	background:transparent url("../images/icon-wrong.png") no-repeat left top;
 }
 
 

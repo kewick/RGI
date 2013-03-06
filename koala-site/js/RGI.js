@@ -93,11 +93,11 @@
 				},
 				"password" : {
 					required: "Please provide a password",
-					minlength: "Your password must be at least 8 characters long"
+					minlength: "Your password must be at least 6 characters long"
 				},
 				"confirmpassword" : {
 					required: "Please provide a password",
-					minlength: "Your password must be at least 3 characters long",
+					minlength: "Your password must be at least 6 characters long",
 					equalTo: "Please enter the same password as above"
 				},
 				"email" : "Please enter a valid email address",
@@ -109,6 +109,9 @@
 				var elem = $(element),
 					corners = ['right center', 'left center'],
 					flipIt = (elem.data("errorPos") == "left");
+				
+				var $inputIcon = elem.siblings(".input-icon");
+				
 
 				// Check we have a valid error message
 				if(!error.is(':empty')) {
@@ -133,10 +136,20 @@
 
 					// If we have a tooltip on this element already, just update its content
 					.qtip('option', 'content.text', error);
+					
+					if($inputIcon.length > 0){
+						$inputIcon.removeClass("correct-icon");
+					}
 				}
 
-				// If the error is empty, remove the qTip
-				else { elem.qtip('destroy'); }
+				// If the error is empty, remove the qTip and show check mark
+				else { 
+					elem.qtip('destroy'); 
+					
+					if($inputIcon.length > 0){
+						$inputIcon.removeClass("help-icon").addClass("correct-icon");
+					}
+				}
 			},
 			success: $.noop // Odd workaround for errorPlacement not firing!nsole.log("highlight "+element);
 			

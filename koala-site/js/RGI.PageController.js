@@ -78,7 +78,12 @@
 		function initForms(){
 			var validateSettings = $.extend(true, self.options.defaultValidateSettings, self.options.extraValidateSettings);
 			$("form").each(function(){
-				$(this).validate(validateSettings);
+				$(this).validate(validateSettings)
+				$(this).find("input, select").on({
+					focusout : function(){
+						$(this).valid();
+					}
+				});
 			});
 			
 			initCustomFields();
@@ -91,7 +96,7 @@
 			    });	
 			}
 			
-			$("form").find("a.help-icon").qtip({
+			$("form").find(".help-icon").qtip({
 				position: {
 					my: "left center",
 					at: "right center",
