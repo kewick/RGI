@@ -147,7 +147,7 @@
 					elem.qtip('destroy'); 
 					
 					if($inputIcon.length > 0){
-						$inputIcon.removeClass("help-icon").addClass("correct-icon");
+						$inputIcon.removeClass("help-icon, wrong-icon").addClass("correct-icon");
 					}
 				}
 			},
